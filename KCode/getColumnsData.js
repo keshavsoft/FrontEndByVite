@@ -1,10 +1,6 @@
 import path from "path";
 import fs from "fs";
 
-let LocalFuncReturnChildren = () => {
-    return ConfigJson.jsonConfig.tableAndColumns.children;
-};
-
 const StartFunc = ({ inTableName }) => {
     let LocalColumnsPath = "ColumnSchema";
 

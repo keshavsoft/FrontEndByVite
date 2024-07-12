@@ -5,22 +5,20 @@ import { viteStaticCopy } from 'vite-plugin-static-copy';
 import path, { resolve } from 'path';
 import { fileURLToPath } from 'url';
 
-import { StartFunc as StartFuncGetFiles } from "./KCode/getFiles.js";
-import { StartFunc as StartFuncGetVariables } from "./KCode/generateVariables.js";
+import { StartFunc as StartFuncGetFiles } from "./KCodeStatic/getFiles.js";
+import { StartFunc as StartFuncGetVariables } from "./KCodeStatic/generateVariables.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const SrcFolder = "src";
+const SrcFolder = "srcStatic";
 
-const FrontEndDistFolder = "publicDir/bin";
+const FrontEndDistFolder = "publicStatic/bin";
 
 const root = resolve(__dirname, SrcFolder);
 
-const CommonTableName = "FriendNames";
-
 let files = StartFuncGetFiles();
-console.log("files : ", files);
+
 build({
     configFile: false,
     build: {
@@ -55,7 +53,7 @@ export default defineConfig((env) => ({
         }),
         nunjucks({
             templatesDir: root,
-            variables: StartFuncGetVariables({ mode: env.mode, inFilesArray: files, inTableName: CommonTableName }),
+            variables: StartFuncGetVariables({ mode: env.mode, inFilesArray: files }),
             nunjucksEnvironment: {
                 filters: {
                     containString: (str, containStr) => {

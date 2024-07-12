@@ -5,6 +5,7 @@ dist/
 
 KData/
 publicDir/
+publicStatic/
 
 src/FrontEnd/AllTables
 src/FrontEnd/FirstTable
