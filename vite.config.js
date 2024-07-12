@@ -17,9 +17,9 @@ const FrontEndDistFolder = "publicDir/bin";
 
 const root = resolve(__dirname, SrcFolder);
 
-let files = StartFuncGetFiles();
+const CommonTableName = "FriendNames";
 
-console.log("files : ", files);
+let files = StartFuncGetFiles();
 
 build({
     configFile: false,
@@ -55,7 +55,7 @@ export default defineConfig((env) => ({
         }),
         nunjucks({
             templatesDir: root,
-            variables: StartFuncGetVariables({ mode: env.mode, inFilesArray: files }),
+            variables: StartFuncGetVariables({ mode: env.mode, inFilesArray: files, inTableName: CommonTableName }),
             nunjucksEnvironment: {
                 filters: {
                     containString: (str, containStr) => {
