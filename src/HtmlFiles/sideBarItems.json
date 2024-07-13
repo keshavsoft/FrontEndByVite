@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Items",
+        "isTitle": true,
+        "icon": "bi bi-back"
+    },
+    {
+        "name": "All",
+        "url": "All.html",
+        "icon": "bi bi-circle-fill"
+    },
+    {
+        "name": "Pending",
+        "url": "Pending.html",
+        "icon": "bi bi-circle-half"
+    },
+    {
+        "name": "Delivered",
+        "url": "Delivered.html",
+        "icon": "bi bi-circle"
+    }
+]
