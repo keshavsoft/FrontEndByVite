@@ -1,0 +1,40 @@
+[
+    {
+        "field": "id",
+        "title": "#",
+        "formatter": "jFGlobalSerialColumn"
+    },
+    {
+        "field": "pk",
+        "title": "Qr Code"
+    },
+    {
+        "field": "ProductName",
+        "title": "ProductName"
+    },
+    {
+        "field": "BillPk",
+        "title": "BillPk",
+        "filterControl": "input"
+    },
+    {
+        "field": "UnitRate",
+        "title": "UnitRate",
+        "footerFormatter": "jFLocalColumnTotal"
+    },
+    {
+        "field": "DisPercentage",
+        "title": "DisPercentage"
+    },
+    {
+        "field": "DisRate",
+        "title": "DisRate",
+        "footerFormatter": "jFLocalColumnTotal",
+        "align": "right"
+    },
+    {
+        "field": "GrossAmout",
+        "title": "GrossAmount",
+        "footerFormatter": "jFLocalColumnTotal"
+    }
+]

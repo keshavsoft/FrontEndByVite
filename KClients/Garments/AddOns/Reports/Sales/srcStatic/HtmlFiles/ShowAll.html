@@ -1,0 +1,45 @@
+{% set title = 'Account Profile' %}
+
+{% extends 'src/Masters/Simple.html' %}
+
+{% block content %}
+<div class="pagetitle">
+    <h1> <a id="RefreshBSTableId">ShowAll</a> </h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item">{{tableName}}</li>
+            <li class="breadcrumb-item active">ShowAll</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<div class="spinner-border" id="SpinnerId" role="status" style="display: none;">
+    <span class="visually-hidden">Loading...</span>
+</div>
+
+<table id="table">
+</table>
+{% endblock %}
+
+{% block js %}
+<script>
+    function jFGlobalSerialColumn(value, row, index) {
+        return index + 1;
+    };
+    function jFLocalColumnTotal(data) {
+        var field = this.field
+        return '₹' + data.map(function (row) {
+            return +row[field]
+        }).reduce(function (sum, i) {
+            return sum + i
+        }, 0)
+    }
+   
+</script>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/extensions/export/bootstrap-table-export.min.js"></script>
+<script
+    src="https://unpkg.com/bootstrap-table@1.22.1/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+<script type="module" src="../Js/pages/ShowAll/StartFunc.js"></script>
+{% endblock %}
