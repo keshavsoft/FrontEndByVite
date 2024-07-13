@@ -1,0 +1,52 @@
+[
+    {
+        "field": "id",
+        "title": "#",
+        "formatter": "jFGlobalSerialColumn"
+    },
+    {
+        "field": "pk",
+        "title": "Qr Code",
+        "filterControl": "input"
+    },
+    {
+        "field": "ProductName",
+        "title": "ProductName",
+        "filterControl": "input"
+    },
+    {
+        "field": "SupplierName",
+        "title": "SupplierName",
+        "filterControl": "input"
+
+    },
+    {
+        "field": "SalePrice",
+        "title": "SalePrice",
+        "footerFormatter": "jFLocalColumnTotal"
+    },
+    {
+        "field": "PurchasePk",
+        "title": "PurchasePk",
+        "filterControl": "select"
+
+    },
+    {
+        "field": "PurchaseDate",
+        "title": "PurchaseDate",
+        "filterControl": "select"
+
+    },
+    {
+        "field": "Sold",
+        "title": "Sold",
+        "filterControl": "select"
+
+    },
+    {
+        "field": "ReturnStatus",
+        "title": "Sale Return",
+        "filterControl": "select"
+
+    }
+]

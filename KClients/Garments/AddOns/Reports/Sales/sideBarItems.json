@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Home",
+        "url": "../../../../Dashboard/Dashboard.html",
+        "icon": "bi bi-house-door-fill"
+    },
+    {
+        "name": "Parent",
+        "url": "../../index.html",
+        "icon": "bi bi-box-arrow-in-left"
+    },
+    {
+        "name": "Qr Code",
+        "isTitle": true
+    },
+    {
+        "name": "ShowAll",
+        "url": "ShowAll.html",
+        "icon": "bi bi-circle-fill"
+    },
+    {
+        "name": "FilterShowAll",
+        "url": "FilterShowAll.html",
+        "icon": "bi bi-circle-fill"
+    }
+]
