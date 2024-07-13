@@ -1,26 +1,21 @@
 [
     {
-        "name": "Home",
-        "url": "../../../../Dashboard/Dashboard.html",
-        "icon": "bi bi-house-door-fill"
-    },
-    {
-        "name": "Parent",
-        "url": "../../index.html",
-        "icon": "bi bi-box-arrow-in-left"
-    },
-    {
-        "name": "Bills",
+        "name": "FriendNames",
         "isTitle": true
     },
     {
-        "name": "Matrix",
-        "url": "Metrix.html",
+        "name": "Create",
+        "url": "CreateSSR.html",
         "icon": "bi bi-circle-fill"
     },
     {
-        "name": "Export",
-        "url": "Export.html",
-        "icon": "bi bi-circle-half"
+        "name": "Show",
+        "url": "ShowSSR.html",
+        "icon": "bi bi-circle-fill"
+    },
+    {
+        "name": "Update",
+        "url": "Alter.html",
+        "icon": "bi bi-circle-fill"
     }
 ]
