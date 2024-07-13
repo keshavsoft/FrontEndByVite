@@ -1,0 +1,155 @@
+{% set title = 'Account Profile' %}
+
+{% extends 'src/Masters/Simple.html' %}
+
+{% block content %}
+<div class="pagetitle">
+    <h1> <a id="RefreshBSTableId">ShowAll</a> </h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item">{{tableName}}</li>
+            <li class="breadcrumb-item active">ShowAll</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-4">
+            <!-- <label class="col-md-4 col-form-label">startDate</label> -->
+            <div class="col-md-8">
+                <input kvs1="" id="startDateId" name="startDate" type="Date" data-dataattribute="Description" value=""
+                    data-clienteval="" type="Number" class="form-control" placeholder="Enter Pcs" autocomplete="off"
+                    required>
+                <div class="invalid-feedback " id="PcsClass">
+                    Should not be Empty!!
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <!-- <label class="col-md-4 col-form-label">endDate</label> -->
+            <div class="col-md-8">
+                <input kvs1="" id="endDateId" name="endDate" type="Date" data-dataattribute="Description" value=""
+                    data-clienteval="" type="Number" class="form-control" placeholder="Enter Pcs" autocomplete="off"
+                    required>
+                <div class="invalid-feedback " id="PcsClass">
+                    Should not be Empty!!
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="col-md-8">
+                <button type="button" name="" id="DateFilerButtonId" class="btn btn-primary">Go</button>
+            </div>
+        </div>
+    </div>
+</div><!-- End Page Title -->
+
+<div class="spinner-border" id="SpinnerId" role="status" style="display: none;">
+    <span class="visually-hidden">Loading...</span>
+</div>
+
+<table id="table">
+</table>
+{% endblock %}
+
+{% block js %}
+<script>
+
+    function jFGlobalSerialColumn(value, row, index) {
+        // console.log(row);
+        return index + 1;
+    };
+
+    function JFDate(value, row, index) {
+        return new Date(row.Date).toLocaleDateString('en-GB')
+    };
+
+    function jFLocalSgstAmountTotal(data) {
+        var field = this.field
+        var total = data.map(function (row) {
+            if (row[field] === undefined) {
+                return 0;
+            } else {
+                return +row[field];
+            };
+        }).reduce(function (sum, i) {
+            return sum + i
+        }, 0);
+        return '₹' + total.toFixed(2);
+    }
+
+    function jFLocalUnitRateTotal(data) {
+        var field = this.field
+
+        var total = data.map(function (row) {
+            if (row[field] === undefined) {
+                return 0;
+            } else {
+                return +row[field];
+            };
+        }).reduce(function (sum, i) {
+            return sum + i
+        }, 0);
+        return '₹' + total.toFixed(2);
+
+    };
+
+    function jFLocalDisRateTotal(data) {
+        var field = this.field
+        var total = data.map(function (row) {
+            if (row[field] === undefined) {
+                return 0;
+            } else {
+                return +row[field];
+            };
+        }).reduce(function (sum, i) {
+            return sum + i
+        }, 0)
+        return '₹' + total.toFixed(2);
+
+    }
+    function jFLocalBasicAmtTotal(data) {
+        var field = this.field
+        var total = data.map(function (row) {
+            if (row[field] === undefined) {
+                return 0;
+            } else {
+                return +row[field];
+            };
+        }).reduce(function (sum, i) {
+            return sum + i
+        }, 0)
+        return '₹' + total.toFixed(2);
+
+    }
+    function jFCgstAmountTotal(data) {
+        var field = this.field
+        var total = data.map(function (row) {
+            if (row[field] === undefined) {
+                return 0;
+            } else {
+                return +row[field];
+            };
+        }).reduce(function (sum, i) {
+            return sum + i
+        }, 0);
+        return '₹' + total.toFixed(2);
+    }
+    function jFTotalAmountTotal(data) {
+        var field = this.field;
+        var total = data.map(function (row) {
+            if (row[field] === undefined) {
+                return 0;
+            } else {
+                return +row[field];
+            }
+        }).reduce(function (sum, i) {
+            return sum + i;
+        }, 0);
+
+        return '₹' + total.toFixed(2);
+    }
+</script>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/extensions/export/bootstrap-table-export.min.js"></script>
+<script type="module" src="../Js/pages/Matrix/StartFunc.js"></script>
+{% endblock %}
