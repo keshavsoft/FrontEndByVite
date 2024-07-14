@@ -5,7 +5,7 @@ import { viteStaticCopy } from 'vite-plugin-static-copy';
 import path, { resolve } from 'path';
 import { fileURLToPath } from 'url';
 
-import { StartFunc as CreateHtmlFiles } from "./KCodeAllTables/CreateHtmlFiles.js";
+import { StartFunc as CreateFiles } from "./KCodeAllTables/CreateFiles/EntryFile.js";
 
 import { StartFunc as StartFuncGetFiles } from "./KCodeAllTables/getFiles.js";
 import { StartFunc as StartFuncGetVariables } from "./KCodeAllTables/generateVariables.js";
@@ -19,7 +19,7 @@ const FrontEndDistFolder = "publicDir/bin";
 
 const root = resolve(__dirname, SrcFolder);
 
-CreateHtmlFiles({ inSrcPath: SrcFolder });
+CreateFiles({ inSrcPath: SrcFolder });
 
 let files = StartFuncGetFiles({ inSrcPath: SrcFolder });
 

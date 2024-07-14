@@ -1,9 +1,11 @@
-import sidebarItems from './sideBarItems.json' with {type: 'json'};
+import fs from "fs";
 import { StartFunc as GetTableNames } from "./GetTableNames.js";
 
 const StartFunc = ({ mode, inFilesArray }) => {
     const variables = {};
     let LocalFiles = inFilesArray;
+    const sidebarItems = fs.readFileSync(`KCodeAllTables/sideBarItems.json`, { encoding: 'utf8' });
+    console.log("sidebarItems : ", sidebarItems);
     // let LoopInsidecolumnData = getColumnsData({ inTableName });
     let LocalTableNames = GetTableNames();
 
@@ -22,14 +24,6 @@ const StartFunc = ({ mode, inFilesArray }) => {
     });
 
     return variables;
-};
-
-const LocalFuncReadColumnsSchema = ({ inTableName }) => {
-    let LocalFilePath = `ColumnSchema/${ColumnSchema}`;
-
-    const data = fs.readFileSync(LocalFilePath, { encoding: 'utf8' });
-
-    return data;
 };
 
 export { StartFunc };
