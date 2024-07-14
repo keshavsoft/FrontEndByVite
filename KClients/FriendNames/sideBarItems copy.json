@@ -1,0 +1,40 @@
+[
+    {
+        "name": "FriendNames",
+        "isTitle": true
+    },
+    {
+        "name": "Create",
+        "url": "CreateSSR.html",
+        "icon": "bi bi-file-plus"
+    },
+    {
+        "name": "Show",
+        "url": "ShowSSR.html",
+        "icon": "bi bi-table"
+    },
+    {
+        "name": "Alter",
+        "url": "AlterWithSSR.html",
+        "icon": "bi bi-box-arrow-up-right",
+        "Children": [
+            {
+                "name": "Alter",
+                "url": "AlterSSR.html",
+                "icon": "bi bi-circle-fill"
+            }
+        ]
+    },
+    {
+        "name": "Delete",
+        "key": "Delete",
+        "icon": "bi bi-trash",
+        "children": [
+            {
+                "name": "DeleteSSR",
+                "url": "DeleteSSR.html",
+                "icon": "bi bi-trash"
+            }
+        ]
+    }
+]

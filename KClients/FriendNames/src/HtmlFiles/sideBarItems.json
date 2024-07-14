@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Home",
+        "url": "../../../../Dashboard/Dashboard.html",
+        "icon": "bi bi-house-door-fill"
+    },
+    {
+        "name": "Parent",
+        "url": "../../index.html",
+        "icon": "bi bi-box-arrow-in-left"
+    },
+    {
+        "name": "Bills",
+        "isTitle": true
+    },
+    {
+        "name": "Matrix",
+        "url": "Matrix.html",
+        "icon": "bi bi-circle-fill"
+    },
+    {
+        "name": "Export",
+        "url": "Export.html",
+        "icon": "bi bi-circle-half"
+    }
+]
