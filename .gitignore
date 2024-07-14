@@ -7,10 +7,7 @@ KData/
 publicDir/
 publicStatic/
 
-src/FrontEnd/AllTables
-src/FrontEnd/FirstTable
-src/FrontEnd/assets/static/DataSchema
-src/FrontEnd/assets/static/js/pagesForAllTables
+srcAllTables/HtmlFiles
 
 .env
 

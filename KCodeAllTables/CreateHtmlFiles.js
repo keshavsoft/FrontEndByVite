@@ -15,17 +15,6 @@ const LocalFuncGetFiles = () => {
     return files;
 };
 
-const LocalFuncGetTableNames = () => {
-    const root = "ColumnSchema";
-    let files = fs.readdirSync(root)
-        .filter(filename => filename.endsWith('.json'))
-        .map(filename => {
-            return path.parse(filename).name;
-        });
-
-    return files;
-};
-
 const StartFunc = ({ inSrcPath }) => {
     const root = `${inSrcPath}/HtmlFiles`;
 
