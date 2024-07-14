@@ -1,10 +1,5 @@
 [
     {
-        "name": "Customers",
-        "isTitle": true,
-        "icon": "bi bi-back"
-    },
-    {
         "name": "Create New",
         "url": "CreateSSRSimpleMobile.html",
         "icon": "bi bi-file-plus"

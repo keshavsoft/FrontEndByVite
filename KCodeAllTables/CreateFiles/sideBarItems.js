@@ -21,11 +21,12 @@ const StartFunc = ({ inSrcPath }) => {
 
 const LocalFuncAddTableName = ({ inTableName }) => {
     let LocalNewArray = sideBarItemsTemplateJson.map(element => {
-        element.url = `${inTableName}${element.url}`;
+        let LoopInsideObject = { ...element };
+        LoopInsideObject.url = `${inTableName}${LoopInsideObject.url}`;
 
-        return element;
+        return LoopInsideObject;
     });
-
+    console.log("LocalNewArray : ", inTableName, LocalNewArray);
     return LocalNewArray;
 };
 

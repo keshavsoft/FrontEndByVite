@@ -17,7 +17,7 @@ const StartFunc = ({ mode, inFilesArray }) => {
         variables[filename + '.html'] = {
             web_title: "Mazer Admin Dashboard",
             filename: filename + '.html',
-            sidebarItems,
+            sidebarItems: JSON.parse(sidebarItems),
             isDev: mode === 'development',
             tableName: LoopInsideTableName
         };
