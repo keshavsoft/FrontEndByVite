@@ -1,0 +1,22 @@
+[
+    {
+        "name": "CRUD Simple",
+        "isTitle": true,
+        "icon": "bi bi-back"
+    },
+    {
+        "name": "Create New",
+        "url": "CreateSSRSimpleMobile.html",
+        "icon": "bi bi-file-plus"
+    },
+    {
+        "name": "Show",
+        "url": "ShowSSRMobile.html",
+        "icon": "bi bi-file-plus"
+    },
+    {
+        "name": "Alter",
+        "url": "AlterWithSSR.html",
+        "icon": "bi bi-file-plus"
+    }
+]
