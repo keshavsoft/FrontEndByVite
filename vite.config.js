@@ -17,7 +17,7 @@ const FrontEndDistFolder = "publicDir/bin";
 
 const root = resolve(__dirname, SrcFolder);
 
-const CommonTableName = "FriendNames";
+const CommonTableName = "ItemNames";
 
 let files = StartFuncGetFiles();
 console.log("files : ", files);
