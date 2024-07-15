@@ -18,5 +18,15 @@
         "name": "Delete",
         "url": "DeleteSSR.html",
         "icon": "bi bi-trash3-fill"
+    },
+    {
+        "name": "FooterSave",
+        "url": "ShowTableFooterAddSSR.html",
+        "icon": "bi bi-trash3-fill"
+    },
+    {
+        "name": "FooterCreate",
+        "url": "ShowAndFooterCreate.html",
+        "icon": "bi bi-trash3-fill"
     }
 ]
