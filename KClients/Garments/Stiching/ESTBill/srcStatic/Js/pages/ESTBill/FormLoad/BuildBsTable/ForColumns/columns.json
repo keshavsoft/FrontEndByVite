@@ -1,0 +1,58 @@
+[
+    {
+        "field": "id",
+        "title": "#",
+        "formatter": "jFGlobalSerialColumn"
+    },
+    {
+        "field": "pk",
+        "title": "EST #"
+    },
+    {
+        "field": "CustomerName",
+        "title": "C Name"
+    },
+    {
+        "field": "GAmount",
+        "title": "GAmount"
+    },
+    {
+        "field": "Date",
+        "title": "Date",
+        "formatter": "jFGlobalDateTime"
+    },
+    {
+        "field": "Description",
+        "title": "Des"
+    },
+    {
+        "field": "DeliveryDate",
+        "title": "Deliver date",
+        "formatter": "jFGlobalDeliveryDate"
+    },
+    {
+        "field": "Items",
+        "title": "Items",
+        "formatter": "ItemCount"
+    },
+    {
+        "field": "Delivered",
+        "title": "Delivered",
+        "formatter": "DeleverCount"
+    },
+    {
+        "field": "Pending",
+        "title": "Pending",
+        "formatter": "PendingCount"
+    },
+    {
+        "field": "Print",
+        "title": "print",
+        "formatter": "ItemsPrint"
+    },
+    {
+        "field": "Delivery",
+        "title": "Delivery",
+        "formatter": "deliveryFormatter"
+    }
+]

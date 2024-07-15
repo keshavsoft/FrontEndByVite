@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Home",
+        "url": "../../Dashboard/Dashboard.html",
+        "icon": "bi bi-back"
+    },
+    {
+        "name": "parent",
+        "url": "CreateSSRSimpleMobile.html",
+        "icon": "bi bi-file-plus"
+    },
+    {
+        "name": "Create",
+        "url": "../Voucher/Create.html",
+        "icon": "bi bi-file-plus"
+    },
+    {
+        "name": "ESTBill",
+        "url": "ESTBill.html",
+        "icon": "bi bi-journal-text"
+    },
+    {
+        "name": "Items",
+        "url": "../Items/All/All.html",
+        "icon": "bi bi-circle"
+    },
+    {
+        "name": "LastItemCreate",
+        "url": "LastItemCreate.html",
+        "icon": "bi bi-file-plus"
+    },
+    {
+        "name": "DeliveryBills",
+        "url": "AlterWithSSR.html",
+        "icon": "bi bi-table"
+    }
+]
