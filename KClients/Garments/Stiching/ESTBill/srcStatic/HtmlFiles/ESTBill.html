@@ -1,0 +1,141 @@
+{% set title = 'Account Profile' %}
+
+{% extends 'src/Masters/Simple.html' %}
+
+{% block content %}
+<div class="pagetitle">
+    <h1> <a id="RefreshBSTableId">ShowAll</a> </h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item">{{tableName}}</li>
+            <li class="breadcrumb-item active">ShowAll</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<div class="spinner-border" id="SpinnerId" role="status" style="display: none;">
+    <span class="visually-hidden">Loading...</span>
+</div>
+
+<table id="table">
+</table>
+{% endblock %}
+
+{% block js %}
+<div class="modal" tabindex="-1" id="showModalId">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"> Print</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="ModalBody">
+
+                <pre id="PrintDiv" style=" margin-bottom: 16px;"> </pre>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="printJS('ModalBody', 'html')">print</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function jFGlobalSerialColumn(value, row, index) {
+        return index + 1;
+    };
+</script>
+<script>
+
+    function jFGlobalSerialColumn(value, row, index) {
+        return index + 1;
+    };
+    function jFGlobalDateTime(value, row, index) {
+        return new Date(row.DateTime).toLocaleDateString('en-GB')
+    };
+    function jFGlobalDeliveryDate(value, row, index) {
+        return new Date(row.Date).toLocaleDateString('en-GB')
+    };
+    function ItemCount(value, row, index) {
+        // console.log("row:", row);
+        return [
+            `<a class="like btn btn-primary" href="../VoucherItems/ShowAll.html?StichRef=${row.pk}" title="printer"> ${row.ItemCount}`,
+            '</a>',
+
+        ].join('')
+
+    };
+    function DeleverCount(value, row, index) {
+        // console.log("row:", row);
+        return [
+            `<a class="like btn btn-secondary" href="../DeliverMenu/Delivery-Items/ShowAll.html?StichRef=${row.pk}" title="printer"> ${row.DeleverCount}`,
+            '</a>',
+
+        ].join('')
+
+    };
+
+    function PendingCount(value, row, index) {
+        // console.log("row:", row);
+        return [
+            `<a class="like btn btn-warning" href="../Delivery/ShowAll.html?StichRef=${row.pk}" title="printer"> ${row.PendingCount}`,
+            '</a>',
+
+        ].join('')
+
+    };
+
+
+    function deliveryFormatter(value, row, index) {
+        return [
+            `<a class="like" href="../Delivery/ShowAll.html?StichRef=${row.pk}" title="Enter">`,
+            '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">',
+            '<path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>',
+            '</svg>',
+            '</a>  '
+        ].join('')
+    };
+    function ItemsPrint(value, row, index) {
+        // console.log("row:", row);
+        return [
+            `<a class="like btn btn-primary" href="#" title="printer">`,
+            '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">',
+            '<path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>',
+            '<path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1"/>',
+            '</svg > ',
+            ' ',
+            row.ItemDetails,
+            '</a>',
+
+        ].join('')
+
+    };
+
+    function detailFormatter(index, row) {
+        var html = []
+        $.each(row, function (key, value) {
+            html.push('<p><b>' + key + ':</b> ' + value + '</p>')
+        })
+        return html.join('')
+    };
+
+    function priceFormatter(data) {
+        var field = this.field
+        return '' + data.map(function (row) {
+            return +row.ItemDetails
+        }).reduce(function (sum, i) {
+            return sum + i
+        }, 0)
+    }
+</script>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/extensions/export/bootstrap-table-export.min.js"></script>
+    <script src="../Js/pages/print.min.js"></script>
+
+<script type="module" src="../Js/pages/ESTBill/StartFunc.js"></script>
+{% endblock %}
