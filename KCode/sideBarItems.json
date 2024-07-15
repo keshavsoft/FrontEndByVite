@@ -13,5 +13,10 @@
         "name": "ShowAll",
         "url": "ShowSSRMobile.html",
         "icon": "bi bi-window-plus"
+    },
+    {
+        "name": "Delete",
+        "url": "DeleteSSR.html",
+        "icon": "bi bi-trash3-fill"
     }
 ]
