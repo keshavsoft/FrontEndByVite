@@ -1,14 +1,15 @@
-  {
-    "Item Name": {
-      "type": "STRING",
-      "unique": true,
-      "HtmlTags": {
-        "Show": {
-          "title": "Item Name"
-        },
-        "Create": {
-          "title": "Item Name"
-        }
+{
+  "Item Name": {
+    "type": "STRING",
+    "unique": true,
+    "HtmlTags": {
+      "Show": {
+        "title": "Item Name"
+      },
+      "Create": {
+        "title": "Item Name",
+        "AutoFocusTag": "autofocus"
       }
     }
   }
+}
