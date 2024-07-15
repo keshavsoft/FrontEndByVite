@@ -18,5 +18,10 @@
         "name": "Alter",
         "url": "AlterWithSSR.html",
         "icon": "bi bi-file-plus"
+    },
+    {
+        "name": "Delete",
+        "url": "DeleteSSR.html",
+        "icon": "bi bi-file-plus"
     }
 ]
