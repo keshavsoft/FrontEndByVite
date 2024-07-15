@@ -25,17 +25,5 @@
         "name": "Delete",
         "url": "DeleteSSR.html",
         "icon": "bi bi-trash3-fill"
-    },
-    {
-        "name": "Alter",
-        "url": "AlterWithSSR.html",
-        "icon": "bi bi-pencil-square",
-        "Children": [
-            {
-                "name": "Alter",
-                "url": "AlterSSR.html",
-                "icon": "bi bi-pencil-square"
-            }
-        ]
     }
 ]
