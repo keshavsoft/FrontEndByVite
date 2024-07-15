@@ -1,6 +1,6 @@
 [
     {
-        "name": "CRUD",
+        "name": "CRUD Simple",
         "isTitle": true,
         "icon": "bi bi-back"
     },
@@ -12,11 +12,6 @@
     {
         "name": "Show",
         "url": "ShowSSRMobile.html",
-        "icon": "bi bi-file-plus"
-    },
-    {
-        "name": "ShowWithInsert",
-        "url": "ShowTableFooterAddSSR.html",
         "icon": "bi bi-file-plus"
     },
     {

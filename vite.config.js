@@ -20,7 +20,7 @@ const root = resolve(__dirname, SrcFolder);
 const CommonTableName = "ItemNames";
 
 let files = StartFuncGetFiles();
-console.log("files : ", files);
+
 build({
     configFile: false,
     build: {

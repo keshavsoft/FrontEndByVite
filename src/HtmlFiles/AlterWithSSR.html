@@ -4,15 +4,16 @@
 
 {% block content %}
 <div class="pagetitle">
-    <h1> <a id="RefreshBSTableId">Alter</a> </h1>
-    <nav>
+    <h1 class="d-block d-sm-none">{{tableName}} Alter</h1>
+    <h1 class="d-none d-sm-block"><a id="RefreshBSTableId">Alter</a></h1>
+    <nav class="d-none d-sm-block">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item">{{tableName}}</li>
             <li class="breadcrumb-item active">Alter</li>
         </ol>
     </nav>
-</div><!-- End Page Title -->
+</div>
 
 <div class="spinner-border" id="SpinnerId" role="status" style="display: none;">
     <span class="visually-hidden">Loading...</span>
