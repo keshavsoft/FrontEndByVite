@@ -8,22 +8,5 @@
         "name": "Create New",
         "url": "CreateSSRSimpleMobile.html",
         "icon": "bi bi-file-plus"
-    },
-    {
-        "name": "ShowAll",
-        "url": "ShowSSRMobile.html",
-        "icon": "bi bi-window-plus",
-        "Children": [
-            {
-                "name": "ShowSSRAll",
-                "url": "ShowSSR.html",
-                "icon": "bi bi-window-plus"
-            }
-        ]
-    },
-    {
-        "name": "Delete",
-        "url": "DeleteSSR.html",
-        "icon": "bi bi-trash3-fill"
     }
 ]
