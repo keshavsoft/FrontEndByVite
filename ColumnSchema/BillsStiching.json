@@ -1,0 +1,67 @@
+{
+    "ProductName": {
+        "type": "STRING",
+        "allowNull": true,
+        "HtmlTags": {
+            "Show": {
+                "title": "ProductName"
+            },
+            "Create": {
+                "title": "ProductName",
+                "AutoFocusTag": "autofocus"
+            }
+        }
+    },
+    "GrossAmount": {
+        "type": "NUMBER",
+        "allowNull": true,
+        "HtmlTags": {
+            "Show": {
+                "title": "Amount"
+            },
+            "Create": {
+                "title": "Amount",
+                "AutoFocusTag": "autofocus"
+            }
+        }
+    },
+    "ItemDescription": {
+        "type": "STRING",
+        "allowNull": true,
+        "HtmlTags": {
+            "Show": {
+                "title": "Description"
+            },
+            "Create": {
+                "title": "Description",
+                "AutoFocusTag": "autofocus"
+            }
+        }
+    },
+    "AddOnAmount": {
+        "type": "NUMBER",
+        "allowNull": true,
+        "HtmlTags": {
+            "Show": {
+                "title": "Add-On"
+            },
+            "Create": {
+                "title": "Add-On",
+                "AutoFocusTag": "autofocus"
+            }
+        }
+    },
+    "GAmount": {
+        "type": "NUMBER",
+        "allowNull": true,
+        "HtmlTags": {
+            "Show": {
+                "title": "GAmount"
+            },
+            "Create": {
+                "title": "GAmount",
+                "AutoFocusTag": "autofocus"
+            }
+        }
+    }
+}
