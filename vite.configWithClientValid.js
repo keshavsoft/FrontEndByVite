@@ -17,7 +17,7 @@ const FrontEndDistFolder = "publicDir/binWithClientValid";
 
 const root = resolve(__dirname, SrcFolder);
 
-const CommonTableName = "ItemNames";
+const CommonTableName = "CustomerNames";
 
 let files = StartFuncGetFiles({ inSrcPath: SrcFolder });
 console.log("files : ", files);
