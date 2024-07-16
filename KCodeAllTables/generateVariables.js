@@ -1,5 +1,6 @@
 import fs from "fs";
 import { StartFunc as GetTableNames } from "./GetTableNames.js";
+import { StartFunc as getColumnsData } from "./getColumnsData.js";
 
 const StartFunc = ({ mode, inFilesArray }) => {
     const variables = {};
@@ -9,18 +10,28 @@ const StartFunc = ({ mode, inFilesArray }) => {
     // let LoopInsidecolumnData = getColumnsData({ inTableName });
     let LocalTableNames = GetTableNames();
 
+
     Object.keys(LocalFiles).forEach((filename) => {
-        let LoopInsideTableName = LocalTableNames.find(element => {
-            return filename.startsWith(element);
-        });
-        console.log("LoopInsideTableName : ", LoopInsideTableName);
         variables[filename + '.html'] = {
             web_title: "Mazer Admin Dashboard",
             filename: filename + '.html',
             sidebarItems: JSON.parse(sidebarItems),
             isDev: mode === 'development',
-            tableName: LoopInsideTableName
+            tableName: "",
+            columnData: {}
         };
+
+        let LoopInsideTableName = LocalTableNames.find(element => {
+            return filename.startsWith(element);
+        });
+
+        if (LoopInsideTableName === undefined === false) {
+            let LoopInsidecolumnData = getColumnsData({ inTableName: LoopInsideTableName });
+
+            variables[filename + '.html'].tableName = LoopInsideTableName;
+            variables[filename + '.html'].columnData = JSON.parse(LoopInsidecolumnData);
+        };
+
     });
 
     return variables;

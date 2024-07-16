@@ -2,8 +2,8 @@ import fs from "fs";
 import path, { resolve } from 'path';
 import { StartFunc as GetTableNames } from "../GetTableNames.js";
 
-const LocalFuncGetFiles = () => {
-    const root = "src/HtmlFiles";
+const LocalFuncGetFiles = ({ inSrcTemplateHtmlsFolder }) => {
+    const root = `${inSrcTemplateHtmlsFolder}/HtmlFiles`;
     let files = {}
 
     fs.readdirSync(root)
@@ -15,11 +15,11 @@ const LocalFuncGetFiles = () => {
     return files;
 };
 
-const StartFunc = ({ inSrcPath }) => {
+const StartFunc = ({ inSrcPath, inSrcTemplateHtmlsFolder }) => {
     const root = `${inSrcPath}/HtmlFiles`;
 
     let TableNamesAsArray = GetTableNames();
-    let LocalHtmlFiles = LocalFuncGetFiles();
+    let LocalHtmlFiles = LocalFuncGetFiles({ inSrcTemplateHtmlsFolder });
     // console.log("LocalHtmlFiles : ", LocalHtmlFiles, inToPath);
     TableNamesAsArray.forEach(LoopTableName => {
         for (const [key, value] of Object.entries(LocalHtmlFiles)) {

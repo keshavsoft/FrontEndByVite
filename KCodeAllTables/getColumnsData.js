@@ -18,6 +18,7 @@ const LocalFuncIsTablePresent = ({ inTableName }) => {
     let LocalFiles = fs.readdirSync(LocalColumnsPath).map(element => {
         return path.parse(element).name;
     });
+    console.log("LocalFiles : ", LocalFiles);
 
     return LocalFiles.includes(inTableName);
 };

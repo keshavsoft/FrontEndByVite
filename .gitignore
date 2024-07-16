@@ -8,6 +8,7 @@ publicDir/
 publicStatic/
 
 srcAllTables/HtmlFiles
+srcAllTables/Js
 
 .env
 

@@ -13,13 +13,14 @@ import { StartFunc as StartFuncGetVariables } from "./KCodeAllTables/generateVar
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const SrcTemplateHtmlsFolder = "src";
 const SrcFolder = "srcAllTables";
 
 const FrontEndDistFolder = "publicDir/bin";
 
 const root = resolve(__dirname, SrcFolder);
 
-CreateFiles({ inSrcPath: SrcFolder });
+CreateFiles({ inSrcPath: SrcFolder, inSrcTemplateHtmlsFolder: SrcTemplateHtmlsFolder });
 
 let files = StartFuncGetFiles({ inSrcPath: SrcFolder });
 
