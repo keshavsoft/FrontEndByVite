@@ -26,16 +26,22 @@
                         <div class="col-md-8">
                             {% if ColumnInfo.type === "DATEONLY" %}
                             <input name="{{ColumnName}}" type="date" class="form-control" autocomplete="off"
-                                {{ColumnInfo.HtmlTags.Create.RequiredTag}}
-                                {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
+                                {{ColumnInfo.HtmlTags.Create.RequiredTag}} {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
                             {% endif %}
                             {% if ColumnInfo.type === "STRING" %}
                             <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
-                                {{ColumnInfo.HtmlTags.Create.RequiredTag}}
-                                {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
+                                {{ColumnInfo.HtmlTags.Create.RequiredTag}} {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
+                            {% endif %}
+                            {% if ColumnInfo.type === "NUMBER" %}
+                            <input name="{{ColumnName}}" type="number" class="form-control" autocomplete="off"
+                                {{ColumnInfo.HtmlTags.Create.RequiredTag}} {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
                             {% endif %}
                             <div class="invalid-feedback">
-                                Should not be Empty!!
+                                {% if ColumnInfo.HtmlTags.Create.BS5.ErrorText %}
+                                {{ColumnInfo.HtmlTags.Create.BS5.ErrorText}}
+                                {% else %}
+                                Should not be {{ColumnName}} !!
+                                {% endif %}
                             </div>
                         </div>
                     </div>
