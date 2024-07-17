@@ -23,5 +23,10 @@
         "name": "Alter",
         "url": "AlterWithSSR.html",
         "icon": "bi bi-box-arrow-up-right"
+    },
+    {
+        "name": "ImageUpload",
+        "url": "ImageUpload.html",
+        "icon": "bi bi-filetype-jpg"
     }
 ]
