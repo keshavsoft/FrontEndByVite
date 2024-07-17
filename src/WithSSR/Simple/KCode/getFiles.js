@@ -1,8 +1,8 @@
 import fs from 'fs'
 import { resolve } from 'path'
 
-const StartFunc = () => {
-    const root = "src/HtmlFiles";
+const StartFunc = ({ inSrcPath }) => {
+    const root = `${inSrcPath}/HtmlFiles`;
     let files = {}
 
     fs.readdirSync(root)

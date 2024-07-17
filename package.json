@@ -10,7 +10,7 @@
     "buildStatic": "vite build --config vite.configStatic.js",
     "buildAllTables": "vite build --config vite.configAllTables.js",
     "buildWithClientValid": "vite build --config src/WithSSR/ClientValidations/vite.config.js",
-     "buildSimple": "vite build --config src/WithSSR/Simple/vite.config.js"
+    "buildSimple": "vite build --config src/WithSSR/Simple/vite.config.js"
   },
   "author": "",
   "license": "ISC",
