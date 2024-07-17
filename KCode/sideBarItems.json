@@ -27,6 +27,6 @@
     {
         "name": "Delete",
         "url": "DeleteSSR.html",
-        "icon": "bi bi-file-plus"
+        "icon": "bi bi-trash3"
     }
 ]
