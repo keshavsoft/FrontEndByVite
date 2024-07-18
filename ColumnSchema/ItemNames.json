@@ -1,31 +1,18 @@
   {
-    "ItemName": {
+    "Item Name": {
       "type": "STRING",
       "unique": true,
       "HtmlTags": {
         "Show": {
-          "title": "Item Name",
-           "RequiredTag":"required"
+          "title": "Item Name"
         },
         "Create": {
           "title": "Item Name",
           "AutoFocusTag": "autofocus",
-          "RequiredTag":"required"
-        }
-      }
-    },
-    "ItemNumber": {
-      "type": "NUMBER",
-      "unique": true,
-      "HtmlTags": {
-        "Show": {
-          "title": "Item Number",
-          "RequiredTag":"required"
-        },
-        "Create": {
-          "title": "Item Number",
-          "AutoFocusTag": "autofocus",
-          "RequiredTag":"required"
+          "RequiredTag": "required",
+          "BS5": {
+            "ErrorText": "Should not be empty..."
+          }
         }
       }
     }
