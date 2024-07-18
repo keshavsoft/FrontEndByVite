@@ -5,15 +5,18 @@ import { viteStaticCopy } from 'vite-plugin-static-copy';
 import path, { resolve } from 'path';
 import { fileURLToPath } from 'url';
 
+import { StartFunc as CreateFiles } from "./KCode/CreateFiles/EntryFile.js";
+
 import { StartFunc as StartFuncGetFiles } from "./KCode/getFiles.js";
 import { StartFunc as StartFuncGetVariables } from "./KCode/generateVariables.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const SrcFolder = "src/WithSSR/WithSubTable/SourceCode";
+const SrcTemplateHtmlsFolder = "src/AllTables/WithSSR/WithSubTable/SourceCode/HtmlTemplateFiles";
+const SrcFolder = "src/AllTables/WithSSR/WithSubTable/SourceCode";
 
-const FrontEndDistFolder = "publicDir/binWithSubTable";
+const FrontEndDistFolder = "publicDir/binATWithSubTable";
 
 const root = resolve(__dirname, SrcFolder);
 
@@ -21,13 +24,17 @@ console.log("root : ", root);
 
 const CommonTableName = "Sales";
 
+CreateFiles({ inSrcPath: SrcFolder, inSrcTemplateHtmlsFolder: "src/AllTables/WithSSR/WithSubTable" });
+
 let files = StartFuncGetFiles({ inSrcPath: SrcFolder });
 // console.log("files : ", files);
+
+
 build({
     configFile: false,
     build: {
         emptyOutDir: false,
-        outDir: resolve(__dirname, `../../../${FrontEndDistFolder}/assets/compiled/js`),
+        outDir: resolve(__dirname, `../../../../${FrontEndDistFolder}/assets/compiled/js`),
         lib: {
             name: 'app',
             formats: ['umd'],
@@ -45,7 +52,7 @@ build({
 export default defineConfig((env) => ({
     publicDir: 'static',
     base: './',
-    root: resolve(__dirname, `../../../${SrcFolder}`),
+    root: resolve(__dirname, `../../../../${SrcFolder}`),
     plugins: [
         viteStaticCopy({
             targets: [
@@ -85,7 +92,7 @@ export default defineConfig((env) => ({
         emptyOutDir: false,
         manifest: true,
         target: "chrome58",
-        outDir: resolve(__dirname, `../../../${FrontEndDistFolder}`),
+        outDir: resolve(__dirname, `../../../../${FrontEndDistFolder}`),
         rollupOptions: {
             input: files,
             output: {
