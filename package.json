@@ -11,7 +11,8 @@
     "buildAllTables": "vite build --config vite.configAllTables.js",
     "buildWithClientValid": "vite build --config src/WithSSR/ClientValidations/vite.config.js",
     "buildSimple": "vite build --config src/WithSSR/Simple/vite.config.js",
-    "buildbs5": "vite build --config src/bs5/Simple/vite.config.js"
+    "buildbs5": "vite build --config src/bs5/Simple/vite.config.js",
+    "buildWithWithSubTable": "vite build --config src/WithSSR/WithSubTable/vite.config.js"
   },
   "author": "",
   "license": "ISC",
