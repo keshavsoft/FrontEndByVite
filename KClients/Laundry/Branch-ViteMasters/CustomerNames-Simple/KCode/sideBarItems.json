@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Customers",
+        "isTitle": true,
+        "icon": "bi bi-people"
+    },
+    {
+        "name": "Parent",
+        "url": "../../Masters.html",
+        "icon": "bi bi-box-arrow-in-left"
+    },
+    {
+        "name": "Create New",
+        "url": "CreateSSRSimpleMobile.html",
+        "icon": "bi bi-file-plus"
+    },
+    {
+        "name": "Show",
+        "url": "ShowSSRMobile.html",
+        "icon": "bi bi-table"
+    },
+    {
+        "name": "Alter",
+        "url": "AlterWithSSR.html",
+        "icon": "bi bi-box-arrow-up-right"
+    },
+    {
+        "name": "Delete",
+        "url": "DeleteSSR.html",
+        "icon": "bi bi-trash3"
+    }
+]
