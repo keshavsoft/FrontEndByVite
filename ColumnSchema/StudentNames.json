@@ -22,7 +22,8 @@
           "RequiredTag": "required"
         },
         "Create": {
-          "title": "Mobile"
+          "title": "Mobile",
+          "RequiredTag": "required"
         }
       }
     },

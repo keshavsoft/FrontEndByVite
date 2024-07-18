@@ -35,7 +35,11 @@
                                 {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
                             {% endif %}
                             <div class="invalid-feedback">
-                                Should not be Empty!!
+                                {% if ColumnInfo.HtmlTags.Create.BS5.ErrorText %}
+                                {{ColumnInfo.HtmlTags.Create.BS5.ErrorText}}
+                                {% else %}
+                                {{ColumnName}} should not be empty!!
+                                {% endif %}
                             </div>
                         </div>
                     </div>
