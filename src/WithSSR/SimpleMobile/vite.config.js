@@ -11,7 +11,7 @@ import { StartFunc as StartFuncGetVariables } from "./KCode/generateVariables.js
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const SrcFolder = "src/WithSSR/Simple/SourceCode";
+const SrcFolder = "src/WithSSR/SimpleMobile/SourceCode";
 
 const FrontEndDistFolder = "publicDir/binSimpleMobile";
 
