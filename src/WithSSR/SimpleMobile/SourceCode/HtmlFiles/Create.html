@@ -34,6 +34,11 @@
                                 {{ColumnInfo.HtmlTags.Create.RequiredTag}}
                                 {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
                             {% endif %}
+                            {% if ColumnInfo.type === "NUMBER" %}
+                            <input name="{{ColumnName}}" type="number" class="form-control" autocomplete="off"
+                                {{ColumnInfo.HtmlTags.Create.RequiredTag}}
+                                {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
+                            {% endif %}
                             <div class="invalid-feedback">
                                 {% if ColumnInfo.HtmlTags.Create.BS5.ErrorText %}
                                 {{ColumnInfo.HtmlTags.Create.BS5.ErrorText}}
