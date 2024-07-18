@@ -6,12 +6,12 @@
     },
     {
         "name": "Create New",
-        "url": "CreateSSRSimpleMobile.html",
+        "url": "Create.html",
         "icon": "bi bi-file-plus"
     },
     {
         "name": "Show",
-        "url": "ShowSSRMobile.html",
+        "url": "Show.html",
         "icon": "bi bi-table"
     },
     {
