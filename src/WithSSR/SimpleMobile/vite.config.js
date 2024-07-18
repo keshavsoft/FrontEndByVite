@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 
 const SrcFolder = "src/WithSSR/Simple/SourceCode";
 
-const FrontEndDistFolder = "publicDir/binSimple";
+const FrontEndDistFolder = "publicDir/binSimpleMobile";
 
 const root = resolve(__dirname, SrcFolder);
 
