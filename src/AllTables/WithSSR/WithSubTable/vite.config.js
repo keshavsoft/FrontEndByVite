@@ -13,22 +13,22 @@ import { StartFunc as StartFuncGetVariables } from "./KCode/generateVariables.js
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const SrcTemplateHtmlsFolder = "src/AllTables/WithSSR/WithSubTable/SourceCode/HtmlTemplateFiles";
-const SrcFolder = "src/AllTables/WithSSR/WithSubTable/SourceCode";
+const SourceFolderName = "SourceCode";
+const SrcFolder = "src/AllTables/WithSSR/WithSubTable";
+const SrcFolder1 = "src/AllTables/WithSSR/WithSubTable/SourceCode";
 
 const FrontEndDistFolder = "publicDir/binATWithSubTable";
 
-const root = resolve(__dirname, SrcFolder);
+const root = resolve(__dirname, `${SrcFolder}/${SourceFolderName}`);
 
 console.log("root : ", root);
 
 const CommonTableName = "Sales";
 
-CreateFiles({ inSrcPath: SrcFolder, inSrcTemplateHtmlsFolder: "src/AllTables/WithSSR/WithSubTable" });
+CreateFiles({ inSrcPath: SrcFolder, inSourceFolderName: SourceFolderName });
 
-let files = StartFuncGetFiles({ inSrcPath: SrcFolder });
+let files = StartFuncGetFiles({ inSrcPath: `${SrcFolder}/${SourceFolderName}` });
 // console.log("files : ", files);
-
 
 build({
     configFile: false,
@@ -39,7 +39,7 @@ build({
             name: 'app',
             formats: ['umd'],
             fileName: 'app',
-            entry: `${SrcFolder}/assets/js/app.js`,
+            entry: `${SrcFolder}/${SourceFolderName}/assets/js/app.js`,
         },
         rollupOptions: {
             output: {
@@ -52,11 +52,11 @@ build({
 export default defineConfig((env) => ({
     publicDir: 'static',
     base: './',
-    root: resolve(__dirname, `../../../../${SrcFolder}`),
+    root: resolve(__dirname, `../../../../${SrcFolder}/${SourceFolderName}`),
     plugins: [
         viteStaticCopy({
             targets: [
-                { src: normalizePath(resolve(__dirname, `./${SrcFolder}/assets/static`)), dest: "assets" }
+                { src: normalizePath(resolve(__dirname, `./${SrcFolder}/${SourceFolderName}/assets/static`)), dest: "assets" }
             ],
             watch: {
                 reloadPageOnChange: true
@@ -64,7 +64,7 @@ export default defineConfig((env) => ({
         }),
         nunjucks({
             templatesDir: root,
-            variables: StartFuncGetVariables({ mode: env.mode, inFilesArray: files, inTableName: CommonTableName }),
+            variables: StartFuncGetVariables({ mode: env.mode, inFilesArray: files, inSrcPath: SrcFolder }),
             nunjucksEnvironment: {
                 filters: {
                     containString: (str, containStr) => {

@@ -1,1 +1,190 @@
-[]
+[
+    {
+        "name": "ItemNames",
+        "key": "ItemNames",
+        "children": [
+            {
+                "name": "CRUD",
+                "isTitle": true,
+                "icon": "bi bi-back",
+                "url": "ItemNamesundefined"
+            },
+            {
+                "name": "Create New",
+                "url": "ItemNamesCreateSSRWithCheck.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Show",
+                "url": "ItemNamesShowSSRMobile.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "ShowWithInsert",
+                "url": "ItemNamesShowTableFooterAddSSR.html",
+                "icon": "bi bi-file-earmark-plus"
+            },
+            {
+                "name": "ShowSSRBulkInsert",
+                "url": "ItemNamesShowSSRBulkInsert.html",
+                "icon": "bi bi-textarea"
+            },
+            {
+                "name": "Alter",
+                "url": "ItemNamesAlterWithSSR.html",
+                "icon": "bi bi-box-arrow-up-right"
+            },
+            {
+                "name": "ImageUpload",
+                "url": "ItemNamesImageUpload.html",
+                "icon": "bi bi-filetype-jpg"
+            },
+            {
+                "name": "Delete",
+                "url": "ItemNamesDeleteSSR.html",
+                "icon": "bi bi-trash3"
+            }
+        ]
+    },
+    {
+        "name": "LedgerNames",
+        "key": "LedgerNames",
+        "children": [
+            {
+                "name": "CRUD",
+                "isTitle": true,
+                "icon": "bi bi-back",
+                "url": "LedgerNamesundefined"
+            },
+            {
+                "name": "Create New",
+                "url": "LedgerNamesCreateSSRWithCheck.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Show",
+                "url": "LedgerNamesShowSSRMobile.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "ShowWithInsert",
+                "url": "LedgerNamesShowTableFooterAddSSR.html",
+                "icon": "bi bi-file-earmark-plus"
+            },
+            {
+                "name": "ShowSSRBulkInsert",
+                "url": "LedgerNamesShowSSRBulkInsert.html",
+                "icon": "bi bi-textarea"
+            },
+            {
+                "name": "Alter",
+                "url": "LedgerNamesAlterWithSSR.html",
+                "icon": "bi bi-box-arrow-up-right"
+            },
+            {
+                "name": "ImageUpload",
+                "url": "LedgerNamesImageUpload.html",
+                "icon": "bi bi-filetype-jpg"
+            },
+            {
+                "name": "Delete",
+                "url": "LedgerNamesDeleteSSR.html",
+                "icon": "bi bi-trash3"
+            }
+        ]
+    },
+    {
+        "name": "Sales",
+        "key": "Sales",
+        "children": [
+            {
+                "name": "CRUD",
+                "isTitle": true,
+                "icon": "bi bi-back",
+                "url": "Salesundefined"
+            },
+            {
+                "name": "Create New",
+                "url": "SalesCreateSSRWithCheck.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Show",
+                "url": "SalesShowSSRMobile.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "ShowWithInsert",
+                "url": "SalesShowTableFooterAddSSR.html",
+                "icon": "bi bi-file-earmark-plus"
+            },
+            {
+                "name": "ShowSSRBulkInsert",
+                "url": "SalesShowSSRBulkInsert.html",
+                "icon": "bi bi-textarea"
+            },
+            {
+                "name": "Alter",
+                "url": "SalesAlterWithSSR.html",
+                "icon": "bi bi-box-arrow-up-right"
+            },
+            {
+                "name": "ImageUpload",
+                "url": "SalesImageUpload.html",
+                "icon": "bi bi-filetype-jpg"
+            },
+            {
+                "name": "Delete",
+                "url": "SalesDeleteSSR.html",
+                "icon": "bi bi-trash3"
+            }
+        ]
+    },
+    {
+        "name": "SalesItems",
+        "key": "SalesItems",
+        "children": [
+            {
+                "name": "CRUD",
+                "isTitle": true,
+                "icon": "bi bi-back",
+                "url": "SalesItemsundefined"
+            },
+            {
+                "name": "Create New",
+                "url": "SalesItemsCreateSSRWithCheck.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Show",
+                "url": "SalesItemsShowSSRMobile.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "ShowWithInsert",
+                "url": "SalesItemsShowTableFooterAddSSR.html",
+                "icon": "bi bi-file-earmark-plus"
+            },
+            {
+                "name": "ShowSSRBulkInsert",
+                "url": "SalesItemsShowSSRBulkInsert.html",
+                "icon": "bi bi-textarea"
+            },
+            {
+                "name": "Alter",
+                "url": "SalesItemsAlterWithSSR.html",
+                "icon": "bi bi-box-arrow-up-right"
+            },
+            {
+                "name": "ImageUpload",
+                "url": "SalesItemsImageUpload.html",
+                "icon": "bi bi-filetype-jpg"
+            },
+            {
+                "name": "Delete",
+                "url": "SalesItemsDeleteSSR.html",
+                "icon": "bi bi-trash3"
+            }
+        ]
+    }
+]

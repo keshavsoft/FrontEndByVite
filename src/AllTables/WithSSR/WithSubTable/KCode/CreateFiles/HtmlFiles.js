@@ -2,8 +2,8 @@ import fs from "fs";
 import path, { resolve } from 'path';
 import { StartFunc as GetTableNames } from "../GetTableNames.js";
 
-const LocalFuncGetFiles = ({ inSrcPath }) => {
-    const root = `${inSrcPath}/HtmlTemplateFiles`;
+const LocalFuncGetFiles = ({ inSrcPath, inSourceFolderName }) => {
+    const root = `${inSrcPath}/${inSourceFolderName}/HtmlTemplateFiles`;
     let files = {}
 
     fs.readdirSync(root)
@@ -15,16 +15,20 @@ const LocalFuncGetFiles = ({ inSrcPath }) => {
     return files;
 };
 
-const StartFunc = ({ inSrcPath, inSrcTemplateHtmlsFolder }) => {
-    const root = `${inSrcPath}/HtmlFiles`;
+const StartFunc = ({ inSrcPath, inSourceFolderName }) => {
+    const root = `${inSrcPath}/${inSourceFolderName}/HtmlFiles`;
+
+    if (!fs.existsSync(root)) {
+        fs.mkdirSync(root);
+    }
 
     let TableNamesAsArray = GetTableNames();
-    let LocalHtmlFiles = LocalFuncGetFiles({ inSrcPath });
-    console.log("LocalHtmlFiles : ", LocalHtmlFiles, root);
+    let LocalHtmlFiles = LocalFuncGetFiles({ inSrcPath, inSourceFolderName });
+    // console.log("LocalHtmlFiles : ", LocalHtmlFiles, root);
     TableNamesAsArray.forEach(LoopTableName => {
         for (const [key, value] of Object.entries(LocalHtmlFiles)) {
             let LocalFileData = fs.readFileSync(value, "utf8");
-            console.log("LocalFileData : ", key, LoopTableName);
+            // console.log("LocalFileData : ", key, LoopTableName);
             if (key === "index") {
                 fs.writeFileSync(`${root}/${key}.html`, LocalFileData);
                 continue;

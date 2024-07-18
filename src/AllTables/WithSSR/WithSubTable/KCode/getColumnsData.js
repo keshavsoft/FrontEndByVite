@@ -1,7 +1,7 @@
 import path from "path";
 import fs from "fs";
 
-const StartFunc = ({ inTableName }) => {
+const StartFunc = ({ inSrcPath, inTableName }) => {
     let LocalColumnsPath = "ColumnSchema";
 
     if (LocalFuncIsTablePresent({ inTableName }) === false) false;
