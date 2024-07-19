@@ -1,7 +1,7 @@
-// import { StartFunc as StartFuncTableFooterSaveButtonId } from "./TableFooterSaveButtonId/EntryFile.js";
+import { StartFunc as StartFuncTableFooterSaveButtonId } from "./TableFooterSaveButtonId/EntryFile.js";
 
 const StartFunc = () => {
-    // StartFuncTableFooterSaveButtonId();
+    StartFuncTableFooterSaveButtonId();
 };
 
 export { StartFunc };

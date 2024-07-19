@@ -1,0 +1,33 @@
+  {
+    "LedgerName": {
+      "type": "STRING",
+      "unique": true,
+      "HtmlTags": {
+        "Show": {
+          "title": "Ledger Name"
+        },
+        "Create": {
+          "title": "Ledger Name",
+          "RequiredTag": "required",
+          "BS5": {
+            "ErrorText": "LedgerName Should not be empty..."
+          }
+        }
+      }
+    },
+    "LedgerGuid": {
+      "type": "STRING",
+      "HtmlTags": {
+        "Show": {
+          "title": "Ledger Guid"
+        },
+        "Create": {
+          "title": "Ledger Guid",
+          "RequiredTag": "required",
+          "BS5": {
+            "ErrorText": "LedgerGuid Should not be empty..."
+          }
+        }
+      }
+    }
+  }

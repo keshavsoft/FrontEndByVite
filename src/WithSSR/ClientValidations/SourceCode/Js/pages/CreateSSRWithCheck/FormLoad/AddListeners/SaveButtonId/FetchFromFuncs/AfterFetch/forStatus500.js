@@ -3,9 +3,9 @@ let StartFunc = async ({ inResponse }) => {
     let jVarLocalResponseText = await jVarLocalResponse.text();
 
     Swal.fire({
-        title: "Good job!",
+        title: "Error!",
         text: jVarLocalResponseText,
-        icon: "success"
+        icon: "error"
     });
 };
 
