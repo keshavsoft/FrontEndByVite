@@ -9,7 +9,7 @@ publicStatic/
 ColumnSchema/
 
 src/AllTables/WithSSR/WithSubTable/SourceCode/HtmlFiles
-rc/AllTables/WithSSR/WithSubTable/SourceCode/Js
+src/AllTables/WithSSR/WithSubTable/SourceCode/Js
 
 .env
 
