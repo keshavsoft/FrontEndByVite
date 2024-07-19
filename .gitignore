@@ -6,9 +6,10 @@ dist/
 KData/
 publicDir/
 publicStatic/
+ColumnSchema/
 
-srcAllTables/HtmlFiles
-srcAllTables/Js
+src/AllTables/WithSSR/WithSubTable/SourceCode/HtmlFiles
+rc/AllTables/WithSSR/WithSubTable/SourceCode/Js
 
 .env
 

@@ -6,11 +6,7 @@
         "title": "VoucherNumber"
       },
       "Create": {
-        "title": "VoucherNumber",
-        "RequiredTag": "required",
-          "BS5": {
-            "ErrorText": "VoucherNumber Should not be empty..."
-          }
+        "title": "VoucherNumber"
       }
     }
   },
@@ -21,11 +17,7 @@
         "title": "VoucherType"
       },
       "Create": {
-        "title": "VoucherType",
-        "RequiredTag": "required",
-          "BS5": {
-            "ErrorText": "VoucherType Should not be empty..."
-          }
+        "title": "VoucherType"
       }
     }
   },
@@ -40,11 +32,7 @@
         "title": "PartyName"
       },
       "Create": {
-        "title": "PartyName",
-        "RequiredTag": "required",
-          "BS5": {
-            "ErrorText": "PartyName Should not be empty..."
-          }
+        "title": "PartyName"
       }
     }
   }

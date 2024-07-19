@@ -5,13 +5,13 @@
         "icon": "bi bi-back"
     },
     {
-        "name": "Create New",
-        "url": "CreateSSRWithCheck.html",
+        "name": "CreateSingle",
+        "url": "CreateSingle.html",
         "icon": "bi bi-plus-circle"
     },
     {
-        "name": "Show",
-        "url": "ShowSSRMobile.html",
+        "name": "CreateSubTable",
+        "url": "CreateSubTable.html",
         "icon": "bi bi-table"
     },
     {

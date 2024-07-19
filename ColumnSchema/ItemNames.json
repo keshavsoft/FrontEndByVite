@@ -11,7 +11,7 @@
         "AutoFocusTag": "autofocus",
         "RequiredTag": "required",
         "BS5": {
-          "ErrorText": "ItemName Should not be empty..."
+          "ErrorText": "Should not be empty..."
         }
       }
     }
