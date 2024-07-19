@@ -11,6 +11,8 @@ ColumnSchema/
 src/AllTables/WithSSR/WithSubTable/SourceCode/HtmlFiles
 src/AllTables/WithSSR/WithSubTable/SourceCode/Js
 
+src/AllTables/WithSSR/WithSubTable/KCode/sideBarItems.json
+
 .env
 
 .vscode

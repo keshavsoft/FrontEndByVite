@@ -40,13 +40,13 @@
 <body>
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
-       
+
         {% include 'src/AllTables/WithSSR/WithSubTable/SourceCode/Headers/allMasters.html' %}
     </header><!-- End Header -->
 
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
-        
+
         {% include 'src/AllTables/WithSSR/WithSubTable/SourceCode/Sidebars/withCollapse.html' %}
     </aside>
     <!-- End Sidebar-->
@@ -57,7 +57,7 @@
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
-       
+
         {% include 'src/AllTables/WithSSR/WithSubTable/SourceCode/Footers/withVersion.html' %}
 
     </footer><!-- End Footer -->
@@ -75,8 +75,9 @@
 
     <script>
         let jVarGlobalTableName = "{{ tableName }}";
+        let jVarGlobalSubTableName = "{{ subTableName }}";
         let jVarGlobalDataPk = "{{ DataPk }}";
-        let jVarGlobalTableTagId = "table";
+        let jVarGlobalSubTableTagId = "SubTableId";
     </script>
 
     <!-- Template Main JS File -->

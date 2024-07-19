@@ -1,8 +1,12 @@
 [
-    
     {
         "name": "CreateSingle",
         "url": "CreateSingle.html",
+        "icon": "bi bi-plus-circle"
+    },
+    {
+        "name": "CreateDataList",
+        "url": "CreateDataList.html",
         "icon": "bi bi-plus-circle"
     },
     {
