@@ -26,7 +26,7 @@ const LocalFuncAddTableName = ({ inTableName }) => {
 
         return LoopInsideObject;
     });
-    console.log("LocalNewArray : ", inTableName, LocalNewArray);
+    // console.log("LocalNewArray : ", inTableName, LocalNewArray);
     return LocalNewArray;
 };
 

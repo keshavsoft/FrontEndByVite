@@ -15,7 +15,7 @@ const __dirname = path.dirname(__filename);
 
 const SourceFolderName = "SourceCode";
 const SrcFolder = "src/AllTables/WithSSR/WithSubTable";
-const SrcFolder1 = "src/AllTables/WithSSR/WithSubTable/SourceCode";
+// const SrcFolder1 = "src/AllTables/WithSSR/WithSubTable/SourceCode";
 
 const FrontEndDistFolder = "publicDir/binATWithSubTable";
 
@@ -23,7 +23,7 @@ const root = resolve(__dirname, `${SrcFolder}/${SourceFolderName}`);
 
 console.log("root : ", root);
 
-const CommonTableName = "Sales";
+// const CommonTableName = "Sales";
 
 CreateFiles({ inSrcPath: SrcFolder, inSourceFolderName: SourceFolderName });
 

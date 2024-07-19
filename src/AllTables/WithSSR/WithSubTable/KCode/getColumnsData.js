@@ -1,7 +1,7 @@
 import path from "path";
 import fs from "fs";
 
-const StartFunc = ({ inSrcPath, inTableName }) => {
+const StartFunc = ({ inTableName }) => {
     let LocalColumnsPath = "ColumnSchema";
 
     if (LocalFuncIsTablePresent({ inTableName }) === false) false;
@@ -13,7 +13,6 @@ const StartFunc = ({ inSrcPath, inTableName }) => {
 
 const LocalFuncIsTablePresent = ({ inTableName }) => {
     let LocalColumnsPath = "ColumnSchema";
-    console.log("LocalColumnsPath : ", LocalColumnsPath);
 
     let LocalFiles = fs.readdirSync(LocalColumnsPath).map(element => {
         return path.parse(element).name;
