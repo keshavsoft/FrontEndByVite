@@ -56,7 +56,7 @@ export default defineConfig((env) => ({
     plugins: [
         viteStaticCopy({
             targets: [
-                { src: normalizePath(resolve(__dirname, `./${SrcFolder}/${SourceFolderName}/assets/static`)), dest: "assets" }
+                { src: normalizePath(resolve(__dirname, `../../../../${SrcFolder}/${SourceFolderName}/assets/static`)), dest: "assets" }
             ],
             watch: {
                 reloadPageOnChange: true

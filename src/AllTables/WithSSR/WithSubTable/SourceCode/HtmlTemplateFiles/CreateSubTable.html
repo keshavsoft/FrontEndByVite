@@ -1,6 +1,6 @@
 {% set title = 'Account Profile' %}
 
-{% extends 'src/FrontEnd/layouts/masterWithSubTable.html' %}
+{% extends 'src/AllTables/WithSSR/WithSubTable/SourceCode/Masters/withSubTable.html' %}
 
 {% block content %}
 <div class="pagetitle">
@@ -107,5 +107,5 @@
 {% endblock %}
 
 {% block js %}
-<script type="module" src="../assets/static/js/pages/CreateSubTableMobile/StartFunc.js"></script>
+<script type="module" src="../Js/pages/{{tableName}}CreateSubTable/StartFunc.js"></script>
 {% endblock %}
