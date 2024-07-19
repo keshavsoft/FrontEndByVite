@@ -1,0 +1,51 @@
+{
+  "VoucherNumber": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "VoucherNumber"
+      },
+      "Create": {
+        "title": "VoucherNumber",
+        "RequiredTag": "required",
+          "BS5": {
+            "ErrorText": "VoucherNumber Should not be empty..."
+          }
+      }
+    }
+  },
+  "VoucherType": {
+    "type": "STRING",
+    "HtmlTags": {
+      "Show": {
+        "title": "VoucherType"
+      },
+      "Create": {
+        "title": "VoucherType",
+        "RequiredTag": "required",
+          "BS5": {
+            "ErrorText": "VoucherType Should not be empty..."
+          }
+      }
+    }
+  },
+  "PartyName": {
+    "type": "STRING",
+    "references": {
+      "model": "LedgerNames",
+      "key": "LedgerName"
+    },
+    "HtmlTags": {
+      "Show": {
+        "title": "PartyName"
+      },
+      "Create": {
+        "title": "PartyName",
+        "RequiredTag": "required",
+          "BS5": {
+            "ErrorText": "PartyName Should not be empty..."
+          }
+      }
+    }
+  }
+}
