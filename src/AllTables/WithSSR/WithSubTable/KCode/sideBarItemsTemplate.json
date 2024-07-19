@@ -1,9 +1,5 @@
 [
-    {
-        "name": "CRUD",
-        "isTitle": true,
-        "icon": "bi bi-back"
-    },
+    
     {
         "name": "CreateSingle",
         "url": "CreateSingle.html",
@@ -16,27 +12,7 @@
     },
     {
         "name": "ShowWithInsert",
-        "url": "ShowTableFooterAddSSR.html",
+        "url": "Show.html",
         "icon": "bi bi-file-earmark-plus"
-    },
-    {
-        "name": "ShowSSRBulkInsert",
-        "url": "ShowSSRBulkInsert.html",
-        "icon": "bi bi-textarea"
-    },
-    {
-        "name": "Alter",
-        "url": "AlterWithSSR.html",
-        "icon": "bi bi-box-arrow-up-right"
-    },
-    {
-        "name": "ImageUpload",
-        "url": "ImageUpload.html",
-        "icon": "bi bi-filetype-jpg"
-    },
-    {
-        "name": "Delete",
-        "url": "DeleteSSR.html",
-        "icon": "bi bi-trash3"
     }
 ]
