@@ -1,21 +1,29 @@
-import { StartFunc as forStatus200 } from "./forStatus200.js";
-import { StartFunc as forStatus500 } from "./forStatus500.js";
+import UrlJson from './url.json' with {type: 'json'};
 
-let StartFunc = async ({ inResponse }) => {
-    let jVarLocalResponse = inResponse;
+let StartFunc = ({ inRowPk }) => {
+    let LocalRowPk = inRowPk;
 
-    switch (jVarLocalResponse.status) {
-        case 200:
-            forStatus200();
-
-            break;
-        case 500:
-            forStatus500({ inResponse });
-
-            break;
-        default:
-            break;
+    if (LocalFuncForSingleTable({ inRowPk: LocalRowPk }) === false) {
+        LocalFuncForAllTables({ inRowPk: LocalRowPk });
     };
 };
 
-export { StartFunc };
+const LocalFuncForSingleTable = ({ inRowPk }) => {
+    let LocalRowPk = inRowPk;
+
+    if (window.location.pathname.endsWith(`/${UrlJson.PresentUrl}`)) {
+        window.location.href = `${UrlJson.RedirectToUrl}?inRowPk=${LocalRowPk}`;
+        return true;
+    };
+
+    return false;
+};
+
+const LocalFuncForAllTables = ({ inRowPk }) => {
+    let LocalRowPk = inRowPk;
+
+    window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}?inRowPk=${LocalRowPk}`;
+};
+
+
+export { StartFunc }
