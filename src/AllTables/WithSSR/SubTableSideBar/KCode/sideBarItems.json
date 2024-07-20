@@ -1,0 +1,28 @@
+[
+    {
+        "name": "{{tableName}}",
+        "key": "{{tableName}}",
+        "children": [
+            {
+                "name": "CreateSingle",
+                "url": "{{tableName}}CreateSingle.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "CreateDataList",
+                "url": "{{tableName}}CreateDataList.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "CreateSubTable",
+                "url": "{{tableName}}CreateSubTable.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "ShowWithInsert",
+                "url": "{{tableName}}Show.html",
+                "icon": "bi bi-file-earmark-plus"
+            }
+        ]
+    }
+]
