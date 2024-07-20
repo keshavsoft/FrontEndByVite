@@ -6,7 +6,8 @@ dist/
 KData/
 publicDir/
 publicStatic/
-ColumnSchema/
+
+ColumnSchema/.json
 
 src/AllTables/WithSSR/WithSubTable/SourceCode/HtmlFiles
 src/AllTables/WithSSR/WithSubTable/SourceCode/Js
