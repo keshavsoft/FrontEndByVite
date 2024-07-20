@@ -1,27 +1,87 @@
 [
     {
-        "name": "{{tableName}}",
-        "key": "{{tableName}}",
+        "name": "ItemNames",
+        "key": "ItemNames",
         "children": [
             {
-                "name": "CreateSingle",
-                "url": "{{tableName}}CreateSingle.html",
+                "name": "Create",
+                "url": "ItemNamesCreateSingle.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Show",
+                "url": "ItemNamesShow.html",
+                "icon": "bi bi-file-earmark-plus"
+            }
+        ]
+    },
+    {
+        "name": "LedgerNames",
+        "key": "LedgerNames",
+        "children": [
+            {
+                "name": "Create",
+                "url": "LedgerNamesCreateSingle.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Show",
+                "url": "LedgerNamesShow.html",
+                "icon": "bi bi-plus-circle"
+            }
+        ]
+    },
+    {
+        "name": "SaleItems",
+        "key": "SaleItems",
+        "children": [
+            {
+                "name": "Create",
+                "url": "SaleItemsCreateSingle.html",
                 "icon": "bi bi-plus-circle"
             },
             {
                 "name": "CreateDataList",
-                "url": "{{tableName}}CreateDataList.html",
+                "url": "SaleItemsCreateDataList.html",
                 "icon": "bi bi-plus-circle"
             },
             {
                 "name": "CreateSubTable",
-                "url": "{{tableName}}CreateSubTable.html",
-                "icon": "bi bi-table"
+                "url": "SaleItemsCreateSubTable.html",
+                "icon": "bi bi-plus-circle"
+            },
+            
+            {
+                "name": "Show",
+                "url": "SaleItemsShow.html",
+                "icon": "bi bi-plus-circle"
+            }
+        ]
+    },
+    {
+        "name": "Sales",
+        "key": "Sales",
+        "children": [
+            {
+                "name": "Create",
+                "url": "SalesCreateSingle.html",
+                "icon": "bi bi-plus-circle"
             },
             {
-                "name": "ShowWithInsert",
-                "url": "{{tableName}}Show.html",
-                "icon": "bi bi-file-earmark-plus"
+                "name": "CreateDataList",
+                "url": "SalesCreateDataList.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "CreateSubTable",
+                "url": "SalesCreateSubTable.html",
+                "icon": "bi bi-plus-circle"
+            },
+            
+            {
+                "name": "Show",
+                "url": "SalesShow.html",
+                "icon": "bi bi-plus-circle"
             }
         ]
     }
