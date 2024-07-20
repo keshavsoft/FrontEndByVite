@@ -1,1 +1,0 @@
-copy all the json schema needed from crudbd repo
