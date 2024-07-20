@@ -15,9 +15,7 @@ src/AllTables/WithSSR/WithSubTable/SourceCode/Js
 src/AllTables/WithSSR/WithSubTable/KCode/sideBarItems.json
 
 .env
-
 .vscode
-
 .log
 
 defineConfig.js
