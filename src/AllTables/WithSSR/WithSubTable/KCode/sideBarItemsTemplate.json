@@ -15,7 +15,7 @@
         "icon": "bi bi-table"
     },
     {
-        "name": "ShowWithInsert",
+        "name": "Show",
         "url": "Show.html",
         "icon": "bi bi-file-earmark-plus"
     }

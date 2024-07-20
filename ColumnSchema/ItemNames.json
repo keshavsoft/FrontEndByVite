@@ -1,0 +1,19 @@
+{
+  "Item Name": {
+    "type": "STRING",
+    "unique": true,
+    "HtmlTags": {
+      "Show": {
+        "title": "Item Name"
+      },
+      "Create": {
+        "title": "Item Name",
+        "AutoFocusTag": "autofocus",
+        "RequiredTag": "required",
+        "BS5": {
+          "ErrorText": "ItamName Should not be empty..."
+        }
+      }
+    }
+  }
+}
