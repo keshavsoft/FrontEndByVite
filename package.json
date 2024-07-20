@@ -15,7 +15,7 @@
     "buildWithWithSubTable": "vite build --config src/WithSSR/WithSubTable/vite.config.js",
     "buildATWithSubTable": "vite build --config src/AllTables/WithSSR/WithSubTable/vite.config.js",
     "buildSimpleMobile": "vite build --config src/WithSSR/SimpleMobile/vite.config.js",
-    "buildATSubTableSideBar": "vite build --config src/AllTables/WithSSR/SubTableSideBar/vite.config.js",
+    "buildATSubTableSideBar": "vite build --config src/AllTables/WithSSR/SubTableSideBar/vite.config.js"
   },
   "author": "",
   "license": "ISC",
