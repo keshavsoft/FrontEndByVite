@@ -3,7 +3,7 @@
 {% extends 'src/WithSSR/Simple/SourceCode/Masters/Simple.html' %}
 
 {% block content %}
-<!-- 
+
 <style>
     #video {
         border: 1px solid black;
@@ -53,8 +53,7 @@
         font-family: "Lucida Grande", "Arial", sans-serif;
         width: 760px;
     }
-</style> -->
-<link rel="stylesheet" href="../assets/static/NiceAdmin/css/camera.css">
+</style>
 
 <div class="pagetitle">
     <h1 class="d-block d-sm-none">{{tableName}} CreateNew</h1>
@@ -99,16 +98,16 @@
                         </div>
                     </div>
                     {% endfor %}
-                    <div class="col-md-12 mt-3">
-                        <button id="CameraId" class="btn btn-primary">Start Camera</button>
+                    <div class="col-md-12">
+                        <button id="CameraId">Camera</button>
                     </div>
-                    <div class="col-md-12 mt-3">
+                    <div class="col-md-12">
                         <video id="video" src=""></video>
                     </div>
-                    <div class="col-md-12 mt-3">
-                        <button id="startbutton" class="btn btn-warning">Take photo</button>
+                    <div class="col-md-12">
+                        <button id="startbutton">Take photo</button>
                     </div>
-                    <div class="col-md-12 mt-3">
+                    <div class="col-md-12">
                         <canvas id="canvas"> </canvas>
                         <img id="photo" alt="The screen capture will appear in this box." />
                     </div>
