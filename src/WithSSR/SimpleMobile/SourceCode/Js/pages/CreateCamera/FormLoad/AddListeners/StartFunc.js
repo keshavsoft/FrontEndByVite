@@ -1,9 +1,9 @@
 import { StartFunc as SaveButtonId } from "./SaveButtonId/EntryFile.js";
-import { StartFunc as uploadFileId } from "./uploadFileId/EntryFile.js";
+import { StartFunc as CameraId } from "./CameraId/EntryFile.js";
 
 let StartFunc = () => {
     SaveButtonId();
-    uploadFileId();
+    CameraId();
 };
 
 export { StartFunc };
