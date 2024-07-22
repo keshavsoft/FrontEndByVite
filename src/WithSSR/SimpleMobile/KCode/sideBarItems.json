@@ -5,13 +5,18 @@
         "icon": "bi bi-back"
     },
     {
-        "name": "Create New",
-        "url": "Create.html",
+        "name": "Create Camera",
+        "url": "CreateCamera.html",
+        "icon": "bi bi-file-plus"
+    },
+    {
+        "name": "CreateCameraOnModal",
+        "url": "CreateCameraOnModal.html",
         "icon": "bi bi-file-plus"
     },
     {
         "name": "Show",
-        "url": "Show.html",
+        "url": "ItemNamesShow.html",
         "icon": "bi bi-table"
     },
     {
