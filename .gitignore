@@ -8,6 +8,7 @@ publicDir/
 publicStatic/
 
 ColumnSchema/*.json
+TableSchema/*.json
 
 src/AllTables/WithSSR/WithSubTable/SourceCode/HtmlFiles
 src/AllTables/WithSSR/WithSubTable/SourceCode/Js

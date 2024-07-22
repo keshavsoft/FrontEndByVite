@@ -2,6 +2,9 @@ import fs from "fs";
 import { StartFunc as getColumnsData } from "./getColumnsData.js";
 import { StartFunc as GetTableNames } from "./GetTableNames.js";
 import { StartFunc as ReadDataSchema } from "./ReadDataSchema.js";
+
+import { StartFunc as prepareSideBar } from "./prepareSideBar.js";
+
 import { StartFunc as foreignTableColumnsConfig } from "./foreignTableColumnsConfig.js";
 
 const StartFunc = ({ mode, inFilesArray, inSrcPath }) => {
@@ -9,7 +12,9 @@ const StartFunc = ({ mode, inFilesArray, inSrcPath }) => {
     let LocalFiles = inFilesArray;
     // let LoopInsidecolumnData = getColumnsData({ inSrcPath, inTableName });
     let LocalTableNames = GetTableNames();
-    const sidebarItems = fs.readFileSync(`${inSrcPath}/KCode/sideBarItems.json`, { encoding: 'utf8' });
+    //   const sidebarItems = fs.readFileSync(`${inSrcPath}/KCode/sideBarItems.json`, { encoding: 'utf8' });
+    const sidebarItems = prepareSideBar();
+    console.log("sidebarItems : ", sidebarItems);
     const LocalTablesWithSchema = ReadDataSchema();
     // console.log("LocalTablesWithSchema : ", LocalTableNames);
 
@@ -17,7 +22,7 @@ const StartFunc = ({ mode, inFilesArray, inSrcPath }) => {
         variables[filename + '.html'] = {
             web_title: "Mazer Admin Dashboard",
             filename: filename + '.html',
-            sidebarItems: JSON.parse(sidebarItems),
+            sidebarItems,
             isDev: mode === 'development',
             tableName: "",
             columnData: {}
