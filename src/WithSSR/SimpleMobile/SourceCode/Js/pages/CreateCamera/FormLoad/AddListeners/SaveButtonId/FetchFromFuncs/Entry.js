@@ -3,18 +3,19 @@ import { StartFunc as CheckFunc } from "./CheckFunc.js";
 import { StartFunc as StartFuncAfterFetch } from "./AfterFetch/EntryFile.js";
 
 let StartFunc = async () => {
-    const imgPreview = document.getElementById("img-preview");
-    imgPreview.style.display = "block";
-    imgPreview.innerHTML = '<img src="' + this.result + '" />';
-    // let jVarLocalFromCheck = CheckFunc();
+    // const imgPreview = document.getElementById("img-preview");
+    // imgPreview.style.display = "block";
+    // imgPreview.innerHTML = '<img src="' + this.result + '" />';
 
-    // if (jVarLocalFromCheck) {
-    //     let jVarLocalDataNeeded = await StartFuncFetchFuncs();
+    let jVarLocalFromCheck = CheckFunc();
 
-    //     if (jVarLocalDataNeeded.status === 200) {
-    //         StartFuncAfterFetch();
-    //     };
-    // };
+    if (jVarLocalFromCheck) {
+        let jVarLocalDataNeeded = await StartFuncFetchFuncs();
+
+        if (jVarLocalDataNeeded.status === 200) {
+            StartFuncAfterFetch();
+        };
+    };
 };
 
-export { StartFunc }
+export { StartFunc };

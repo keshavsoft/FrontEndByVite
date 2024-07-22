@@ -17,6 +17,17 @@ let StartFunc = () => {
             console.error(`${err.name}: ${err.message}`);
         });
 
+    // LocalFuncShowModal();
+};
+
+const LocalFuncShowModal = () => {
+    const myModal = new bootstrap.Modal('#exampleModal', {
+        keyboard: false
+    });
+
+    const modalToggle = document.getElementById('toggleMyModal');
+
+    myModal.show();
 };
 
 export { StartFunc };

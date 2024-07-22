@@ -6,7 +6,7 @@ let StartFunc = async () => {
     let LocaltableName = jVarGlobalTableName;
 
     let jVarLocalFetchHeaders = StartFuncFetchHeaders();
-    let jVarLocalFetchUrl = `/${LocalroutePath}/${LocaltableName}/UploadImage/1`;
+    let jVarLocalFetchUrl = `/${LocalroutePath}/${LocaltableName}/UploadImageAsData`;
     let response = await fetch(jVarLocalFetchUrl, jVarLocalFetchHeaders);
     // let data = await response.json();
 
