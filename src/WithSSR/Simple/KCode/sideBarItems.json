@@ -5,10 +5,16 @@
         "icon": "bi bi-back"
     },
     {
+        "name": "Create",
+        "url": "Create.html",
+        "icon": "bi bi-plus-circle"
+    },
+    {
         "name": "CreateCamera",
         "url": "CreateCamera.html",
         "icon": "bi bi-camera-fill"
     },
+    
     {
         "name": "CreateCameraOnModal",
         "url": "CreateCameraOnModal.html",
