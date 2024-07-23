@@ -3,7 +3,7 @@ import { StartFunc as ToHtml } from "./ToHtml/EntryFile.js";
 
 let StartFunc = async () => {
     let jVarLocalResponse = await FetchGet();
-
+    console.log("jVarLocalResponse : ", jVarLocalResponse);
     ToHtml({ inFetchData: jVarLocalResponse });
 };
 
