@@ -5,9 +5,14 @@
         "icon": "bi bi-back"
     },
     {
-        "name": "Create New",
-        "url": "CreateSSRSimpleMobile.html",
-        "icon": "bi bi-file-plus"
+        "name": "CreateCamera",
+        "url": "CreateCamera.html",
+        "icon": "bi bi-camera-fill"
+    },
+    {
+        "name": "CreateCameraOnModal",
+        "url": "CreateCameraOnModal.html",
+        "icon": "bi bi-camera-video-fill"
     },
     {
         "name": "Show",
