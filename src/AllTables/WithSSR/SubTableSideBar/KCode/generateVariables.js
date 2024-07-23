@@ -14,7 +14,7 @@ const StartFunc = ({ mode, inFilesArray, inSrcPath }) => {
     let LocalTableNames = GetTableNames();
     //   const sidebarItems = fs.readFileSync(`${inSrcPath}/KCode/sideBarItems.json`, { encoding: 'utf8' });
     const sidebarItems = prepareSideBar();
-    console.log("sidebarItems : ", sidebarItems);
+    // console.log("sidebarItems : ", sidebarItems);
     const LocalTablesWithSchema = ReadDataSchema();
     // console.log("LocalTablesWithSchema : ", LocalTableNames);
 
