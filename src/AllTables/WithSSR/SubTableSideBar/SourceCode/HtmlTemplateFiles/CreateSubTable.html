@@ -37,7 +37,7 @@
         <tr>
             {% for ColumnName, ColumnInfo in foreignTablecolumnData %}
             {% if ColumnInfo.HtmlTags.SubTable.isShown %}
-            <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.Show.title}}</th>
+            <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.SubTable.title}}</th>
             {% endif %}
             {% endfor %}
             <th>Options</th>
@@ -108,4 +108,5 @@
 
 {% block js %}
 <script type="module" src="../Js/pages/{{tableName}}CreateSubTable/StartFunc.js"></script>
+
 {% endblock %}
