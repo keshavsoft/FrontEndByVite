@@ -25,6 +25,11 @@
         "icon": "bi bi-table"
     },
     {
+        "name": "ShowNoSerial",
+        "url": "ShowNoSerial.html",
+        "icon": "bi bi-file-earmark-spreadsheet"
+    },
+    {
         "name": "ShowWithInsert",
         "url": "ShowTableFooterAddSSR.html",
         "icon": "bi bi-file-earmark-plus"

@@ -28,15 +28,14 @@
     <thead>
         <tr>
             {% for ColumnName, ColumnInfo in columnData %}
-       
             <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.Show.title}}</th>
- 
             {% endfor %}
             <th>Options</th>
         </tr>
     </thead>
     <tfoot>
         <tr id="tableFooterId">
+            <th></th>
             {% for ColumnName, ColumnInfo in columnData %}
             <th>
                 <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
