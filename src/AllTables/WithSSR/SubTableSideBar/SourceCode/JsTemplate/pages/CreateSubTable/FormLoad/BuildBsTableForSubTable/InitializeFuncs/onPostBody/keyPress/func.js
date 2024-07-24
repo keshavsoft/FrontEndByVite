@@ -1,4 +1,4 @@
-let jVarCommonValuesObject = {};
+let KSEval = {};
 
 const StartFunc = (evt) => {
     let value = evt.key;
@@ -11,10 +11,8 @@ const StartFunc = (evt) => {
 
     if (value === "Enter") {
         jFLocalInputValuesToOject();
+
         jVarLocalCurrentTarget.value = eval(jVarLocalEvalString);
-
-        console.log("jVarLocalCurrentTarget : ", eval(jVarLocalEvalString));
-
     };
 };
 
@@ -24,7 +22,12 @@ const jFLocalInputValuesToOject = () => {
     let jVarLocalInputs = jVarLocalHtml.querySelectorAll("tfoot input");
 
     jVarLocalInputs.forEach(element => {
-        jVarCommonValuesObject[element.name] = element.value;
+        if (element.type === "number") {
+            KSEval[element.name] = parseInt(element.value);
+            return;
+        };
+
+        KSEval[element.name] = element.value;
     });
 };
 

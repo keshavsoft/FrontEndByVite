@@ -17,10 +17,12 @@ const jFLocalSetFocusToFirstInput = () => {
 const jFLocalKeyPress = () => {
     let jVarLocalTableName = jVarGlobalSubTableTagId;
     let jVarLocalHtml = document.getElementById(jVarLocalTableName);
-    let jVarLocalTableFooter = jVarLocalHtml.querySelector("tfoot input");
+    let jVarLocalTableFooterInputs = jVarLocalHtml.querySelectorAll("tfoot input[data-ksclienteval]");
 
-    if (jVarLocalTableFooter === null === false) {
-        jVarLocalTableFooter.addEventListener("keypress", keyPress);
+    if (jVarLocalTableFooterInputs.length > 0) {
+        jVarLocalTableFooterInputs.forEach(div => {
+            div.addEventListener("keypress", keyPress);
+        });
     };
 };
 
