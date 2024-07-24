@@ -1,8 +1,8 @@
-import { StartFunc as StartFuncRefreshBSTableId } from "./SaveButtonId/EntryFile.js";
+import { StartFunc as SaveButtonId } from "./SaveButtonId/EntryFile.js";
 import { StartFunc as StartFuncBsSubTable } from "./BsSubTable/EntryFile.js";
 
 let StartFunc = () => {
-    StartFuncRefreshBSTableId();
+    SaveButtonId();
     StartFuncBsSubTable();
 };
 

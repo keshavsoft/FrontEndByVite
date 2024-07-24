@@ -1,4 +1,3 @@
-// import { StartFunc as StartFuncForColumns } from "./ForColumns/EntryFile.js";
 import { StartFunc as StartFuncForOnPostBody } from "./onPostBody/EntryFile.js";
 
 const StartFunc = async () => {
