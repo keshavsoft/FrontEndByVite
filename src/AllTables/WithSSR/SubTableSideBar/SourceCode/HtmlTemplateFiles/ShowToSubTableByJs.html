@@ -26,6 +26,7 @@
             {% for ColumnName, ColumnInfo in columnData %}
             <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.Show.title}}</th>
             {% endfor %}
+            <th data-field="Show" data-formatter="jFLocalRowShow">Show</th>
         </tr>
 
     </thead>
@@ -38,8 +39,18 @@
         return index + 1;
     };
 
+    function jFLocalRowShow(value, row, index) {
+        return [
+            `<a class="like" href="#" title="Like">`,
+            '<i class="bi bi-arrow-right-square"></i>',
+            '</a>  '
+
+
+        ].join('')
+    }
+
 </script>
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/extensions/export/bootstrap-table-export.min.js"></script>
-<script type="module" src="../Js/pages/{{tableName}}Show/StartFunc.js"></script>
+<script type="module" src="../Js/pages/{{tableName}}ShowToSubTableByJs/StartFunc.js"></script>
 {% endblock %}
