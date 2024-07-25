@@ -27,6 +27,8 @@
             <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.Show.title}}</th>
             {% endfor %}
             <th data-field="Show" data-formatter="jFLocalRowShow">Show</th>
+            <th data-field="Advance" data-formatter="jFLocalRowAdvance">Advance</th>
+
         </tr>
 
     </thead>
@@ -40,6 +42,15 @@
     };
 
     function jFLocalRowShow(value, row, index) {
+        return [
+            `<a class="like" href="#" title="Like">`,
+            '<i class="bi bi-arrow-right-square"></i>',
+            '</a>  '
+
+
+        ].join('')
+    }
+    function jFLocalRowAdvance(value, row, index) {
         return [
             `<a class="like" href="#" title="Like">`,
             '<i class="bi bi-arrow-right-square"></i>',
