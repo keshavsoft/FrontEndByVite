@@ -6,8 +6,8 @@ const StartFunc = async () => {
     var $table = $(`#${jVarLocalTableName}`);
 
     $table.bootstrapTable({
-        data: [],
-        onPostBody: StartFuncForOnPostBody
+        data: []
+        // onPostBody: StartFuncForOnPostBody
     });
 };
 
