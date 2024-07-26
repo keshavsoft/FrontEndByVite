@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="pagetitle">
-    <h1 class="d-block d-sm-none">{{tableName}} InsertSubTable</h1>
+    <h1 class="d-block d-sm-none d-print-none">{{tableName}} InsertSubTable</h1>
     <h1 class="d-none d-sm-block">InsertSubTable</h1>
     <nav class="d-none d-sm-block">
         <ol class="breadcrumb">
@@ -16,17 +16,14 @@
 </div><!-- End Page Title -->
 
 <form onsubmit="return false" id="FormId">
-    <div class="row ColumnsRow">
-        {% for ColumnName, ColumnInfo in columnData %}
-        <div class="col-md-12">
-            <label class="col-md-4 col-form-label">{{ColumnInfo.HtmlTags.Create.title}}</label>
-
-            <div class="col-md-8">
-                <input name="{{ColumnName}}" type="text" class="form-control" disabled>
-            </div>
+    {% for ColumnName, ColumnInfo in columnData %}
+    <div class="row mb-3">
+        <label class="col">{{ColumnInfo.HtmlTags.Create.title}}</label>
+        <div class="col">
+            <input type="text" class="form-control" name="{{ColumnName}}" disabled>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
 </form>
 
 {% if foreignTablecolumnData %}

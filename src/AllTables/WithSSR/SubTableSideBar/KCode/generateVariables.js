@@ -36,7 +36,7 @@ const StartFunc = ({ mode, inFilesArray, inSrcPath }) => {
             let LoopInsidecolumnData = getColumnsData({ inSrcPath, inTableName: LoopInsideTableName });
 
             variables[filename + '.html'].tableName = LoopInsideTableName;
-            variables[filename + '.html'].columnData = JSON.parse(LoopInsidecolumnData);
+            variables[filename + '.html'].columnData = LoopInsidecolumnData;
 
             let LocalInsideForeignTable = foreignTableColumnsConfig({ inTableName: LoopInsideTableName, inTableWithColumnData: LocalTablesWithSchema });
 
