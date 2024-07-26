@@ -1,21 +1,18 @@
 import UrlJson from './url.json' with {type: 'json'};
 
 let StartFunc = () => {
+   
     //  window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}`;
-    if (LocalFuncForSingleTable() === false) {
-        LocalFuncForAllTables();
-    };
+    LocalFuncForSingleTable()
 
 };
 
 const LocalFuncForSingleTable = () => {
-    if (window.location.pathname.endsWith(`/${UrlJson.PresentUrl}`)) {
-        let jVarLocalHref = `${UrlJson.RedirectToUrl}`;
-
-        window.location.href = jVarLocalHref;
-
-        return true;
-    };
+    const url = new URL(window.location.href);
+    const params1 = new URLSearchParams(url.search);
+    let NewURl = new URL(`./${jVarGlobalTableName}ShowAlterSSR.html`, url);
+    const new_url = new URL(`${NewURl.href}?${params1}`);
+    window.location.href = new_url.href;
 };
 
 const LocalFuncForAllTables = () => {
