@@ -4,7 +4,7 @@ import path from 'path';
 const StartFunc = () => {
     let LocalSideBarArray = [];
     let LocalTableSchemaObject = LocalFuncReadJsonFiles();
-    console.log("LocalTableSchemaObject : ", LocalTableSchemaObject);
+    // console.log("LocalTableSchemaObject : ", LocalTableSchemaObject);
     LocalSideBarArray = Object.keys(LocalTableSchemaObject).map(element => {
         let LoopInsideObject = {};
 
@@ -26,7 +26,11 @@ const LocalFuncReadJsonFiles = () => {
         .filter(filename => filename.endsWith('.json'))
         .forEach(filename => {
             let LoopInsideFileData = fs.readFileSync(`${root}/${filename}`, "utf8");
-            LocalFilesObject[path.parse(filename).name] = JSON.parse(LoopInsideFileData);
+            let LoopInsideJsonFileData = JSON.parse(LoopInsideFileData);
+            if ("SideBar" in LoopInsideJsonFileData.TableConfig.HtmlConfig) {
+                LocalFilesObject[path.parse(filename).name] = JSON.parse(LoopInsideFileData);
+
+            }
         });
 
     return LocalFilesObject;
