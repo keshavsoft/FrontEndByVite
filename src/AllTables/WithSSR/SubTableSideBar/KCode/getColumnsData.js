@@ -5,7 +5,7 @@ const StartFunc = ({ inTableName }) => {
     if (LocalFuncIsTablePresent({ inTableName }) === false) false;
 
     const data = LocalFuncColumnData({ inTableName });
-    console.log("aaaaaaa : ", inTableName, data);
+    // console.log("aaaaaaa : ", inTableName, data);
     return LocalFuncReturnWantedColumnsOnly({ inColumnsData: data, inTableName });
 };
 
@@ -19,18 +19,17 @@ const LocalFuncColumnData = ({ inTableName }) => {
     return JSON.parse(data);
 };
 
-
 const LocalFuncReturnWantedColumnsOnly = ({ inColumnsData, inTableName }) => {
     const originalObject = inColumnsData;
     const keysToKeep = LocalFuncColumnsInTableSchema({ inTableName });
-    console.log("bbbbbbb : ", originalObject, keysToKeep);
+    let newObject = {};
+    // console.log("bbbbbbb : ", originalObject, keysToKeep);
     if (keysToKeep === undefined) {
         return originalObject;
     };
-
-    const newObject = Object.fromEntries(
-        Object.entries(originalObject).filter(([key]) => keysToKeep.includes(key))
-    );
+    for (const [key, value] of Object.entries(keysToKeep)) {
+        newObject[key] = { ...value, ...inColumnsData[key] };
+    };
 
     return newObject;
     console.log(newObject); // Output: { name: "Alice", city: "London" }
@@ -55,4 +54,4 @@ const LocalFuncColumnsInTableSchema = ({ inTableName }) => {
     return LocalJsonData.TableConfig.HtmlConfig?.main?.columns;
 };
 
-export { StartFunc };
+export { StartFunc }; 

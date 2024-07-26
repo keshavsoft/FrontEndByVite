@@ -34,7 +34,7 @@ const StartFunc = ({ mode, inFilesArray, inSrcPath }) => {
 
         if (LoopInsideTableName === undefined === false) {
             let LoopInsidecolumnData = getColumnsData({ inSrcPath, inTableName: LoopInsideTableName });
-
+            console.log("LoopInsidecolumnData: ", LoopInsidecolumnData);
             variables[filename + '.html'].tableName = LoopInsideTableName;
             variables[filename + '.html'].columnData = LoopInsidecolumnData;
 
