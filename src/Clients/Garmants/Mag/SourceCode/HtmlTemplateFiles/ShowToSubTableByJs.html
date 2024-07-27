@@ -27,6 +27,7 @@
             <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.Show.title}}</th>
             {% endfor %}
             <th data-field="Show" data-formatter="jFLocalRowShow">Show</th>
+            <th data-field="Alter" data-formatter="jFLocalRowAlter">Alter</th>
             <th data-field="Advance" data-formatter="jFLocalRowAdvance">Advance</th>
 
         </tr>
@@ -45,6 +46,15 @@
         return [
             `<a class="like" href="#" title="Like">`,
             '<i class="bi bi-arrow-right-square"></i>',
+            '</a>  '
+
+
+        ].join('')
+    }
+    function jFLocalRowAlter(value, row, index) {
+        return [
+            `<a class="like" href="#" title="Like">`,
+            '<i class="bi bi-pencil-square"></i>',
             '</a>  '
 
 

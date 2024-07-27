@@ -14,7 +14,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const SourceFolderName = "SourceCode";
-const SrcFolder = "src/AllTables/WithSSR/SubTableSideBar";
+// const SrcFolder = "src/AllTables/WithSSR/SubTableSideBar";
+const SrcFolder = "src/Clients/Garmants/Mag";
 // const SrcFolder1 = "src/AllTables/WithSSR/WithSubTable/SourceCode";
 
 const FrontEndDistFolder = "publicDir/Garmants";
