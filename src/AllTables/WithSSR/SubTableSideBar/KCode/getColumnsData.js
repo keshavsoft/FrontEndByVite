@@ -5,7 +5,7 @@ const StartFunc = ({ inTableName }) => {
     if (LocalFuncIsTablePresent({ inTableName }) === false) false;
 
     const data = LocalFuncColumnData({ inTableName });
-    // console.log("aaaaaaa : ", inTableName, data);
+
     return LocalFuncReturnWantedColumnsOnly({ inColumnsData: data, inTableName });
 };
 
@@ -23,16 +23,18 @@ const LocalFuncReturnWantedColumnsOnly = ({ inColumnsData, inTableName }) => {
     const originalObject = inColumnsData;
     const keysToKeep = LocalFuncColumnsInTableSchema({ inTableName });
     let newObject = {};
-    // console.log("bbbbbbb : ", originalObject, keysToKeep);
+
     if (keysToKeep === undefined) {
         return originalObject;
     };
+
     for (const [key, value] of Object.entries(keysToKeep)) {
-        newObject[key] = { ...value, ...inColumnsData[key] };
+        if (key in inColumnsData) {
+            newObject[key] = { ...value, ...inColumnsData[key] };
+        };
     };
 
     return newObject;
-    console.log(newObject); // Output: { name: "Alice", city: "London" }
 };
 
 const LocalFuncIsTablePresent = ({ inTableName }) => {
