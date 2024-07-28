@@ -32,14 +32,13 @@
                             {% else %}
 
                             {% if ColumnInfo.type === "DATEONLY" %}
-
                             <input name="{{ColumnName}}" type="date" class="form-control" autocomplete="off"
                                 {{ColumnInfo.HtmlTags.Create.RequiredTag}} {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
                             {% endif %}
 
                             {% if ColumnInfo.type === "STRING" %}
-
-                            <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
+                            <input name="{{ColumnName}}" type="text"
+                                class="form-control {{ColumnInfo.HtmlTags.Create.class}}" autocomplete="off"
                                 {{ColumnInfo.HtmlTags.Create.RequiredTag}} {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
                             {% endif %}
 
@@ -74,6 +73,13 @@
 
 {% endblock %}
 
+
+{% block css %}
+
+{% endblock %}
+
 {% block js %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 <script type="module" src="../Js/pages/{{tableName}}CreateWithMobile/StartFunc.js"></script>
 {% endblock %}
