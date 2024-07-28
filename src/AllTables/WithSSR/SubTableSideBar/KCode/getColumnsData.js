@@ -30,10 +30,10 @@ const LocalFuncReturnWantedColumnsOnly = ({ inColumnsData, inTableName }) => {
 
     for (const [key, value] of Object.entries(keysToKeep)) {
         if (key in inColumnsData) {
-            newObject[key] = { ...value, ...inColumnsData[key] };
+            newObject[key] = { ...inColumnsData[key], ...value };
         };
     };
-
+    // console.log("newObject : ", newObject.StudentName.HtmlTags);
     return newObject;
 };
 
