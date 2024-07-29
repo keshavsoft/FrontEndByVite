@@ -18,6 +18,9 @@
 <form onsubmit="return false" id="FormId">
     <div class="row ColumnsRow">
         {% for ColumnName, ColumnInfo in columnData %}
+        
+        {% if ColumnInfo.HtmlTags.Alter.isShown %}
+
         <div class="col-md-12">
             <label class="col-md-4 col-form-label">{{ColumnInfo.HtmlTags.Create.title}}</label>
 
@@ -25,6 +28,9 @@
                 <input name="{{ColumnName}}" type="text" class="form-control" disabled>
             </div>
         </div>
+       
+        {% endif %}
+
         {% endfor %}
     </div>
 </form>
