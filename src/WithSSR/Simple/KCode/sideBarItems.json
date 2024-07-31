@@ -40,6 +40,11 @@
         "icon": "bi bi-box-arrow-up-right"
     },
     {
+        "name": "ShowWithImage",
+        "url": "ShowWithImage.html",
+        "icon": "bi bi-filetype-jpg"
+    },
+    {
         "name": "Delete",
         "url": "DeleteSSR.html",
         "icon": "bi bi-trash3"
