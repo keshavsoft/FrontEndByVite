@@ -1,5 +1,7 @@
 import sidebarItems from './sideBarItems.json' with {type: 'json'};
-import { StartFunc as getColumnsData } from "./getColumnsData.js";
+// import { StartFunc as getColumnsData } from "./getColumnsData.js";
+
+import { StartFunc as getColumnsData } from "../../../CommonFuncs/getColumnsData.js";
 
 const StartFunc = ({ mode, inFilesArray, inTableName }) => {
     const variables = {};
@@ -13,7 +15,7 @@ const StartFunc = ({ mode, inFilesArray, inTableName }) => {
             sidebarItems,
             isDev: mode === 'development',
             tableName: inTableName,
-            columnData: JSON.parse(LoopInsidecolumnData)
+            columnData: LoopInsidecolumnData
         };
     });
 
