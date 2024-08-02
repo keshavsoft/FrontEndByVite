@@ -1,8 +1,8 @@
-import { StartFunc as ShowOnDom } from "./ShowOnDom/EntryFile.js";
 import { StartFunc as StartFuncAddListeners } from "./AddListeners/StartFunc.js";
+import { StartFunc as StartFuncBuildBsTable } from "./BuildBsTable/EntryFile.js";
 
 const StartFunc = () => {
-    ShowOnDom().then();
+    StartFuncBuildBsTable();
     StartFuncAddListeners();
 };
 
