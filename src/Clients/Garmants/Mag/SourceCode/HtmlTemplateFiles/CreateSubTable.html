@@ -64,10 +64,19 @@
                    data-ksclienteval="{{ColumnInfo.HtmlTags.SubTable.ClientEvalString}}">
             </th>
             {% else %}
-            {% if (ColumnInfo.type === "INTEGER") or (ColumnInfo.type === "STRING") %}
+            {% if  (ColumnInfo.type === "STRING") %}
             <th>
                 <input name="{{ColumnName}}" type="{{'STRING' if (ColumnInfo.type == 'STRING') else 'number'}}"
                  class="form-control" autocomplete="off"
+                    list="{{ColumnInfo.HtmlTags.CreateInFooter.ListId}}"
+                    {{ColumnInfo.HtmlTags.CreateInFooter.RequiredTag}}
+                    {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
+            </th>
+            {% endif %}
+            {% if (ColumnInfo.type === "INTEGER") %}
+            <th>
+                <input name="{{ColumnName}}" type="{{'STRING' if (ColumnInfo.type == 'STRING') else 'number'}}"
+                 class="form-control" autocomplete="off" value="0" min="0"
                     list="{{ColumnInfo.HtmlTags.CreateInFooter.ListId}}"
                     {{ColumnInfo.HtmlTags.CreateInFooter.RequiredTag}}
                     {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
