@@ -10,6 +10,7 @@ const StartFunc = () => {
 
         LoopInsideObject.name = element;
         LoopInsideObject.key = element;
+        LoopInsideObject.icon = LocalTableSchemaObject[element].TableConfig.HtmlConfig.SideBar.icon;
         LoopInsideObject.children = LocalTableSchemaObject[element].TableConfig.HtmlConfig.SideBar.children;
 
         return LoopInsideObject;
@@ -29,7 +30,6 @@ const LocalFuncReadJsonFiles = () => {
             let LoopInsideJsonFileData = JSON.parse(LoopInsideFileData);
             if ("SideBar" in LoopInsideJsonFileData.TableConfig.HtmlConfig) {
                 LocalFilesObject[path.parse(filename).name] = JSON.parse(LoopInsideFileData);
-
             }
         });
 
