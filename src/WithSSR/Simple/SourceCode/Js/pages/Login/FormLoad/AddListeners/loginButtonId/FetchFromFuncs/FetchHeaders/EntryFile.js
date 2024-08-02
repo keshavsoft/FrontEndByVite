@@ -1,6 +1,8 @@
 import KeysJson from './Keys.json' with {type: 'json'};
 
 let StartFunc = () => {
+    // console.log("aaaaaaaaaaaa : ", KeysJson);
+    // KeysJson.body = JSON.parse(KeysJson.body);
     KeysJson.body.UserName = jFLocalyourUsername();
     KeysJson.body.Password = jFLocalyourPassword();
     KeysJson.body = JSON.stringify(KeysJson.body);
