@@ -1,29 +1,29 @@
-import UrlJson from './url.json' with {type: 'json'};
+// import UrlJson from './url.json' with {type: 'json'};
 
-let StartFunc = ({ inRowPk }) => {
+let StartFunc = async ({ inRowPk }) => {
     let LocalRowPk = inRowPk;
+    let url = `/bin/${jVarGlobalTableName}/SingleImage/${LocalRowPk}`
 
-    if (LocalFuncForSingleTable({ inRowPk: LocalRowPk }) === false) {
-        LocalFuncForAllTables({ inRowPk: LocalRowPk });
-    };
+    let jVarFromFetch = await fetch(url);
+    console.log(jVarFromFetch);
 
-    // window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}?inRowPk=${LocalRowPk}`;
+    if (jVarFromFetch.status === 200) {
+        const imageBlob = await jVarFromFetch.blob();
+
+        const imageObjectURL = URL.createObjectURL(imageBlob);
+
+        const image = document.getElementById('ShowImageId')
+        image.src = imageObjectURL;
+
+        const myModalAlternative = new bootstrap.Modal('#ShowImageModal', {
+            keyboard: false
+        });
+        myModalAlternative.show();
+    } else {
+        swal({ "title": "No data" })
+    }
 };
 
-const LocalFuncForSingleTable = ({ inRowPk }) => {
-    let LocalRowPk = inRowPk;
-
-    if (window.location.pathname.endsWith(`/${UrlJson.PresentUrl}`)) {
-        window.location.href = `${UrlJson.RedirectToUrl}?inRowPk=${LocalRowPk}`;
-        return true;
-    };
-};
-
-const LocalFuncForAllTables = ({ inRowPk }) => {
-    let LocalRowPk = inRowPk;
-
-    window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}?inRowPk=${LocalRowPk}`;
-};
 
 
 export { StartFunc }
