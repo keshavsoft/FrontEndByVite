@@ -1,0 +1,64 @@
+{% set title = 'Account Profile' %}
+
+{% extends 'src/Clients/Laundry/Washtex/SourceCode/Masters/hideInPrint.html' %}
+
+{% block content %}
+<div class="pagetitle">
+    <h1 class="d-block d-sm-none d-print-none">{{tableName}} InsertSubTable</h1>
+    <h1 class="d-none d-sm-block">InsertSubTable</h1>
+    <nav class="d-none d-sm-block">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">{{tableName}}</li>
+            <li class="breadcrumb-item active">InsertSubTable</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<form onsubmit="return false" id="FormId">
+    {% for ColumnName, ColumnInfo in columnData %}
+    <div class="row mb-3">
+        <label class="col">{{ColumnInfo.HtmlTags.Create.title}}</label>
+        <div class="col">
+            <input type="text" class="form-control" name="{{ColumnName}}" disabled>
+        </div>
+    </div>
+    {% endfor %}
+</form>
+
+{% if foreignTablecolumnData %}
+<h1><a href="#" id="BsSubTableRefreshId"></a></h1>
+
+<table id="SubTableId" class="table">
+    <thead>
+        <tr>
+            {% for ColumnName, ColumnInfo in foreignTablecolumnData %}
+            {% if ColumnInfo.HtmlTags.SubTable.isShown %}
+            <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.SubTable.title}}</th>
+            {% endif %}
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+{% endif %}
+
+{% for ColumnName, ColumnInfo in columnData %}
+{% if ColumnInfo.references %}
+<datalist id="{{ColumnInfo.references.model}}DLId"></datalist>
+{% endif %}
+{% endfor %}
+
+{% for ColumnName, ColumnInfo in foreignTablecolumnData %}
+{% if ColumnInfo.references %}
+<datalist id="{{ColumnInfo.references.model}}DLId"></datalist>
+{% endif %}
+{% endfor %}
+
+{% endblock %}
+
+{% block js %}
+<script type="module" src="../Js/pages/{{tableName}}RowShowSTPrint/StartFunc.js"></script>
+{% endblock %}
