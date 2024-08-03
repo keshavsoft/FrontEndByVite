@@ -1,7 +1,8 @@
-import UrlJson from "./url.json" with { type: "json" };
+// import UrlJson from "./url.json" with { type: "json" };
+import UrlJson from "../../../../Config.json" with { type: "json" };
 
 let StartFunc = async () => {
-    let LocalroutePath = UrlJson.PostUrl;
+    let LocalroutePath = UrlJson.routePath;
     let LocaltableName = jVarGlobalSubTableName;
     let jVarLocalinRowPk = getUrlQueryParams({ inGetKey: "inRowPk" });
 
