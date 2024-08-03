@@ -8,7 +8,7 @@ const StartFunc = () => {
 if (StartFuncCheckTocken({ inTokenName: "KSToken" }) !== false) {
 
     const url = new URL(window.location.href);
-    let NewURl = new URL("../../index.html", url);
+    let NewURl = new URL("./index.html", url);
 
     window.location.href = NewURl.href;
 };
