@@ -1,14 +1,15 @@
 import fs from "fs";
 import { StartFunc as GetTableNames } from "../GetTableNames.js";
+const CommonHtmlFiles = ["Index", "Login"];
 
 const StartFunc = ({ inSrcPath, inSourceFolderName }) => {
     fs.readdirSync(`${inSrcPath}/${inSourceFolderName}/JsTemplate/pages`)
         .forEach(filename => {
             let TableNamesAsArray = GetTableNames();
 
-            if (filename === "Index") {
+            // if (filename === "Index") {
+            if (CommonHtmlFiles.includes(filename)) {
                 fs.cpSync(`${inSrcPath}/${inSourceFolderName}/JsTemplate/pages/${filename}`, `${inSrcPath}/${inSourceFolderName}/Js/pages/${filename}`, { recursive: true });
-
                 // fs.writeFileSync(`${root}/${key}.html`, LocalFileData);
                 return true;
             };

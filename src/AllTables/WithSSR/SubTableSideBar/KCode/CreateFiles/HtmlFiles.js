@@ -1,6 +1,7 @@
 import fs from "fs";
-import path, { resolve } from 'path';
+import { resolve } from 'path';
 import { StartFunc as GetTableNames } from "../GetTableNames.js";
+const CommonHtmlFiles = ["index", "login"];
 
 const LocalFuncGetFiles = ({ inSrcPath, inSourceFolderName }) => {
     const root = `${inSrcPath}/${inSourceFolderName}/HtmlTemplateFiles`;
@@ -28,8 +29,10 @@ const StartFunc = ({ inSrcPath, inSourceFolderName }) => {
     TableNamesAsArray.forEach(LoopTableName => {
         for (const [key, value] of Object.entries(LocalHtmlFiles)) {
             let LocalFileData = fs.readFileSync(value, "utf8");
-            // console.log("LocalFileData : ", key, LoopTableName);
-            if (key === "index") {
+            console.log("LocalFileData : ", key, CommonHtmlFiles);
+            // if (key === "index") {
+
+            if (CommonHtmlFiles.includes(key)) {
                 fs.writeFileSync(`${root}/${key}.html`, LocalFileData);
                 continue;
             };
