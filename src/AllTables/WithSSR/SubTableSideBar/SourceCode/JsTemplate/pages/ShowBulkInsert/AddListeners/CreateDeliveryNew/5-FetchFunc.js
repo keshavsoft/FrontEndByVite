@@ -1,8 +1,10 @@
+import UrlJson from "../../Config.json" assert { type: "json" }; 
+
 let StartFunc = async ({ inBodyData }) => {
     let jVarLocalTableName = jVarGlobalTableName;
-
+    let jVarLocalroutePath = UrlJson.routePath;
     let jVarLocalBodyData = inBodyData;
-    let jVarLocalFetchUrl = `/bin/${jVarLocalTableName}/MultiInsertWithCheck`;
+    let jVarLocalFetchUrl = `/${jVarLocalroutePath}/${jVarLocalTableName}/MultiInsertWithCheck`;
 
     let jVarLocalFetchHeaderObject = {
         method: "POST",
