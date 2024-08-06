@@ -1,5 +1,5 @@
 let StartFunc = () => {
-    window.location.href = "/";
+    window.location.href = "./";
 };
 
 export { StartFunc };
