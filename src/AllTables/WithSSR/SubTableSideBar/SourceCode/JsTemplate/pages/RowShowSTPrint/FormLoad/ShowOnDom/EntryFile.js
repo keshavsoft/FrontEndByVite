@@ -1,4 +1,5 @@
 import { StartFunc as ForData } from "./ForData/EntryFile.js";
+const CommonHeadRowId = "HeadRowId";
 
 const StartFunc = async () => {
     let jVarLocalData = await ForData();
@@ -13,7 +14,7 @@ const StartFunc = async () => {
 };
 
 const jFLocalShowInInputs = ({ inDataAsObject }) => {
-    let jVarLocalFormId = document.getElementById('FormId');
+    let jVarLocalFormId = document.getElementById(CommonHeadRowId);
     const highlightedItems = jVarLocalFormId.querySelectorAll("input");
 
     highlightedItems.forEach((userItem) => {
