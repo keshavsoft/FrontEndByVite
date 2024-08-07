@@ -1,0 +1,129 @@
+{% set title = 'Account Profile' %}
+
+{% extends 'src/WithSSR/SimpleMobile/SourceCode/Masters/Simple.html' %}
+
+{% block content %}
+
+<style>
+    #video {
+        border: 1px solid black;
+        box-shadow: 2px 2px 3px black;
+        width: 320px;
+        height: 240px;
+    }
+
+    #photo {
+        border: 1px solid black;
+        box-shadow: 2px 2px 3px black;
+        width: 320px;
+        height: 240px;
+    }
+
+    #canvas {
+        display: none;
+    }
+
+    .camera {
+        width: 340px;
+        display: inline-block;
+    }
+
+    .output {
+        width: 340px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    #startbutton {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: 32px;
+        background-color: rgb(0 150 0 / 50%);
+        border: 1px solid rgb(255 255 255 / 70%);
+        box-shadow: 0px 0px 1px 2px rgb(0 0 0 / 20%);
+        font-size: 14px;
+        font-family: "Lucida Grande", "Arial", sans-serif;
+        color: rgb(255 255 255 / 100%);
+    }
+
+    .contentarea {
+        font-size: 16px;
+        font-family: "Lucida Grande", "Arial", sans-serif;
+        width: 760px;
+    }
+</style>
+
+<div class="pagetitle">
+    <h1 class="d-block d-sm-none">{{tableName}} CreateNew</h1>
+    <h1 class="d-none d-sm-block">CreateNew</h1>
+    <nav class="d-none d-sm-block">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">{{tableName}}</li>
+            <li class="breadcrumb-item active">CreateNew</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section">
+    <div class="row">
+        <div class="col">
+            <form onsubmit="return false" id="FormId">
+                <div class="row ColumnsRow">
+                    {% for ColumnName, ColumnInfo in columnData %}
+                    <div class="col-md-12">
+                        <label class="col-md-4 col-form-label">{{ColumnInfo.HtmlTags.Create.title}}</label>
+                        <div class="col-md-8">
+                            {% if ColumnInfo.type === "DATEONLY" %}
+                            <input name="{{ColumnName}}" type="date" class="form-control" autocomplete="off"
+                                {{ColumnInfo.HtmlTags.Create.RequiredTag}} {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
+                            {% endif %}
+                            {% if ColumnInfo.type === "STRING" %}
+                            <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
+                                {{ColumnInfo.HtmlTags.Create.RequiredTag}} {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
+                            {% endif %}
+                            {% if ColumnInfo.type === "NUMBER" %}
+                            <input name="{{ColumnName}}" type="number" class="form-control" autocomplete="off"
+                                {{ColumnInfo.HtmlTags.Create.RequiredTag}} {{ColumnInfo.HtmlTags.Create.AutoFocusTag}}>
+                            {% endif %}
+                            <div class="invalid-feedback">
+                                {% if ColumnInfo.HtmlTags.Create.BS5.ErrorText %}
+                                {{ColumnInfo.HtmlTags.Create.BS5.ErrorText}}
+                                {% else %}
+                                {{ColumnName}} should not be empty!!
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="col-md-12">
+                        <button id="CameraId">Camera</button>
+                    </div>
+                    <div class="col-md-12">
+                        <video id="video" src=""></video>
+                    </div>
+                    <div class="col-md-12">
+                        <button id="startbutton">Take photo</button>
+                    </div>
+                    <div class="col-md-12">
+                        <canvas id="canvas"> </canvas>
+                        <img id="photo" alt="The screen capture will appear in this box." />
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-sm-10">
+                        <button id="SaveButtonId" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block js %}
+<script type="module" src="../Js/pages/CreateCamera/StartFunc.js"></script>
+{% endblock %}

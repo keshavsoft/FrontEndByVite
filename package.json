@@ -15,6 +15,7 @@
     "buildWithWithSubTable": "vite build --config src/WithSSR/WithSubTable/vite.config.js",
     "buildATWithSubTable": "vite build --config src/AllTables/WithSSR/WithSubTable/vite.config.js",
     "buildSimpleMobile": "vite build --config src/WithSSR/SimpleMobile/vite.config.js",
+    "buildSimpleMobileWithSideBar": "vite build --config src/WithSSR/SimpleMobileWithSideBar/vite.config.js",
     "buildATSubTableSideBar": "vite build --config src/AllTables/WithSSR/SubTableSideBar/vite.config.js",
     "Mag": "vite build --config src/Clients/Garmants/Mag/vite.config.js",
     "mazer": "vite build --config vite.config-mazer.js",
