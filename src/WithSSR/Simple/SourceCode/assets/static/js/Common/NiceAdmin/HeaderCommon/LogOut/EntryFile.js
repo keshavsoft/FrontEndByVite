@@ -9,4 +9,4 @@ let StartFunc = () => {
     };
 };
 
-StartFunc();
+export { StartFunc };
