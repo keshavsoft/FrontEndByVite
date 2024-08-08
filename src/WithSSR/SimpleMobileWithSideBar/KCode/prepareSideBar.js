@@ -26,7 +26,7 @@ const StartFunc = ({ inTableName }) => {
 
     let LoopInsideJsonFileData = JSON.parse(LoopInsideFileData);
 
-    return LoopInsideJsonFileData.TableConfig.HtmlConfig.SideBar;
+    return LoopInsideJsonFileData.TableConfig.HtmlConfig.SideBar.children;
 };
 
 export { StartFunc };
