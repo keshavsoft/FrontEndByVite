@@ -1,6 +1,6 @@
 import fs from "fs";
 import { StartFunc as GetTableNames } from "../GetTableNames.js";
-const CommonHtmlFiles = ["Index", "Login"];
+const CommonHtmlFiles = ["Index", "Login", "register"];
 
 const StartFunc = ({ inSrcPath, inSourceFolderName }) => {
     fs.readdirSync(`${inSrcPath}/${inSourceFolderName}/JsTemplate/pages`)
