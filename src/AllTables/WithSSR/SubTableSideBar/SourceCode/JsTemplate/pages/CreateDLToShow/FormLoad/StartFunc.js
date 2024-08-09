@@ -8,6 +8,19 @@ const StartFunc = async () => {
     ToLocalStorage();
     ToDataList();
     ShowOnDom();
+    jFLocalFillDataLists();
+    jFLocalFetchMasters();
+
 };
+const jFLocalFillDataLists = () => {
+    let jVarLocalHeaderToDataListId = document.getElementById('HeaderToDataListId');
+    jVarLocalHeaderToDataListId.click();
+};
+
+const jFLocalFetchMasters = () => {
+    let jVarLocalHeaderToDataListId = document.getElementById('AllMastersHeaderId');
+    jVarLocalHeaderToDataListId.click();
+};
+
 
 export { StartFunc };
