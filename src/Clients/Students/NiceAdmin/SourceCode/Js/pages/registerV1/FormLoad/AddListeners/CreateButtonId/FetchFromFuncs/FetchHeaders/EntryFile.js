@@ -8,7 +8,6 @@ let StartFunc = () => {
     jVarLocalKeys.body.StudentName = jFLocalStudentNameId();
     jVarLocalKeys.body.Mobile = jFLocalMobileId();
     jVarLocalKeys.body.Email = jFLocalEmailId();
-    jVarLocalKeys.body.College = jFLocalCollegeSelectId();
     jVarLocalKeys.body = JSON.stringify(jVarLocalKeys.body);
 
     return jVarLocalKeys;
@@ -35,15 +34,6 @@ let jFLocalMobileId = () => {
 let jFLocalEmailId = () => {
     let jVarLocalEmailId = 'EmailId'
     let jVarLocalHtmlId = document.getElementById(jVarLocalEmailId);
-
-    if (jVarLocalHtmlId === null === false) {
-        return jVarLocalHtmlId.value.trim();
-    };
-};
-
-let jFLocalCollegeSelectId = () => {
-    let jVarLocalCollegeSelectId = 'CollegeSelectId'
-    let jVarLocalHtmlId = document.getElementById(jVarLocalCollegeSelectId);
 
     if (jVarLocalHtmlId === null === false) {
         return jVarLocalHtmlId.value.trim();
