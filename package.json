@@ -27,7 +27,8 @@
     "TrailBalance": "vite build --config src/Clients/Accounts/TrailBalance/vite.config.js",
     "GarmantsScan": "vite build --config src/Clients/Garmants/Scan/vite.config.js",
     "GarmantsReports": "vite build --config src/Clients/Garmants/Reports/vite.config.js",
-    "WashtexBranch": "vite build --config src/Clients/Washtex/Branch/vite.config.js"
+    "WashtexBranch": "vite build --config src/Clients/Washtex/Branch/vite.config.js",
+    "DynamicShow": "vite build --config src/Dynamic/Show/vite.config.js"
   },
   "author": "",
   "license": "ISC",

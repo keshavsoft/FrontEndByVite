@@ -1,0 +1,5 @@
+{
+    "routePath": "binV3",
+    "tableName": "Openings",
+    "GetUrl": "/binV3/StudentNames/Show/DataOnly"
+}
