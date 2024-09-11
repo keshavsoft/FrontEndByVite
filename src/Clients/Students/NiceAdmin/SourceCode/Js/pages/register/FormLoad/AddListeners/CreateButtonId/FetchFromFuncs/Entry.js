@@ -11,7 +11,6 @@ let StartFunc = async () => {
 
         let jVarLocalFirstInValid = jVarLocalFormId.querySelector(".is-invalid");
         jVarLocalFirstInValid.focus();
-        console.log("jVarLocalFirstInValid : ", jVarLocalFirstInValid);
 
         return false;
     };
@@ -19,7 +18,7 @@ let StartFunc = async () => {
     let jVarLocalFromFetch = await StartFuncFetchFuncs();
 
     if (jVarLocalFromFetch.status === 200) {
-        let jVarLocalFetchData = await jVarLocalFromFetch.json();
+        // let jVarLocalFetchData = await jVarLocalFromFetch.json();
         StartFuncAfterFetch();
     };
 
