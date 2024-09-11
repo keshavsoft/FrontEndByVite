@@ -4,14 +4,12 @@ let StartFunc = () => {
 
     const url = new URL(window.location.href);
     const params1 = new URLSearchParams(url.search);
-    let NewURl = new URL("./checkMail.html", url);
+    let NewURl = new URL("./checkMailV1.html", url);
     const new_url = new URL(`${NewURl.href}?${params1}`);
     new_url.searchParams.append('userName', jVarLocalYouserName);
     new_url.searchParams.append('userMail', jVarLocalMail);
 
     window.location.href = new_url.href;
-
-    // window.location.href = "./login.html";
 };
 
 let jFLocalyourUsername = () => {
