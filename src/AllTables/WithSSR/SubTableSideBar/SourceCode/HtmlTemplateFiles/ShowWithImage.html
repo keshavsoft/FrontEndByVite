@@ -2,7 +2,6 @@
 
 {% extends 'src/AllTables/WithSSR/SubTableSideBar/SourceCode/Masters/withSubTable.html' %}
 
-
 {% block content %}
 <div class="pagetitle">
     <h1 class="d-block d-sm-none">{{tableName}}ShowWithImage</h1>
@@ -19,17 +18,15 @@
 <div class="spinner-border" id="SpinnerId" role="status" style="display: none;">
     <span class="visually-hidden">Loading...</span>
 </div>
+
 <table id="table">
     <thead>
         <tr>
             <th data-formatter="jFGlobalSerialColumn">#</th>
-
             {% for ColumnName, ColumnInfo in columnData %}
             <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.Show.title}}</th>
             {% endfor %}
             <th data-field="KS-ImageUploadButton" data-formatter="jFLocalImageColumn">ShowImage</th>
-
-
         </tr>
     </thead>
 </table>
@@ -37,24 +34,24 @@
 
 {% block js %}
 <div class="modal fade" id="ShowImageModal" tabindex="-1" role="dialog" aria-labelledby="modal-notification"
-        aria-hidden="true">
-        <div class="modal-dialog modal-danger modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h6 class="modal-title" id="ShowImageModalLabel">ShowImage</h6>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="" alt="" id="ShowImageId" width="700">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-info" data-bs-dismiss="modal">close</button>
-                </div>
+    aria-hidden="true">
+    <div class="modal-dialog modal-danger modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title" id="ShowImageModalLabel">ShowImage</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="" alt="" id="ShowImageId" width="700">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-bs-dismiss="modal">close</button>
             </div>
         </div>
     </div>
+</div>
 <script>
     function jFGlobalSerialColumn(value, row, index) {
         return index + 1;

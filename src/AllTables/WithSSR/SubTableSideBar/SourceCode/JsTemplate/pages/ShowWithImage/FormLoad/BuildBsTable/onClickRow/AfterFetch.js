@@ -1,5 +1,3 @@
-// import UrlJson from './url.json' with {type: 'json'};
-
 let StartFunc = async ({ inRowPk }) => {
     let LocalRowPk = inRowPk;
     let url = `/bin/${jVarGlobalTableName}/SingleImage/${LocalRowPk}`
@@ -23,7 +21,5 @@ let StartFunc = async ({ inRowPk }) => {
         swal({ "title": "No data" })
     }
 };
-
-
 
 export { StartFunc }
